@@ -1,9 +1,21 @@
 $(document).ready(function(){
 
   // Progress
-  $(document).scroll(function(){
+  $(window).on('scroll orientationchange resize', function(){
+    progressBar();
+  };
+
+  // ScrollTop
+  $('#topper').click(function(){
+    $('html').animate({
+      scrollTop: 0
+    }, 'slow');
+  });
+
+  function progressBar(){
+    // Calc progression
     var docHeight = $(document).height();
-    var winHeight = $(window).innerHeight();
+    var winHeight = Math.min(document.documentElement.clientHeight, window.screen.height, window.innerHeight); //$(window).innerHeight();
     var scrollTop = $(window).scrollTop();
     var percentage = ((scrollTop / (docHeight - winHeight)) * 100);
 
@@ -15,13 +27,5 @@ $(document).ready(function(){
     } else {
       $('#topper').hide();
     }
-  });
-
-  // ScrollTop
-  $('#topper').click(function(){
-    $('html').animate({
-      scrollTop: 0
-    }, 'slow');
-  });
-
+  };
 });
