@@ -19,7 +19,7 @@ $(document).ready(function(){
     var scrollTop = $(window).scrollTop();
     var percentage = ((scrollTop / (docHeight - winHeight)) * 100);
 
-    $('footer p').html(docHeight, document.documentElement.clientHeight, window.screen.height, window.innerHeight, scrollTop, percentage);
+    $('footer p').text('').append(docHeight, ' / ', winHeight, ' / ', scrollTop, ' / ', percentage);
 
     $('#progress').css({'width': percentage + '%'});
 
