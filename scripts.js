@@ -19,7 +19,9 @@ $(document).ready(function(){
     var scrollTop = $(window).scrollTop();
     var percentage = ((scrollTop / (docHeight - winHeight)) * 100);
 
-    $('.progress').css({'width': percentage + '%'});
+    alert(docHeight, document.documentElement.clientHeight, window.screen.height, window.innerHeight, scrollTop, percentage);
+
+    $('#progress').css({'width': percentage + '%'});
 
     // ScrollTop Toggle
     if(percentage > 30){
