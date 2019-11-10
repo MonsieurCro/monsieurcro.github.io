@@ -15,7 +15,7 @@ $(document).ready(function(){
   function progressBar(){
     // Calc progression
     var docHeight = $(document).height();
-    var winHeight = Math.max(document.documentElement.clientHeight, window.screen.height, window.innerHeight); //$(window).innerHeight();
+    var winHeight = /*Math.min(document.documentElement.clientHeight, window.screen.height, window.innerHeight);*/ $(window).innerHeight();
     var scrollTop = $(window).scrollTop();
     var percentage = ((scrollTop / (docHeight - winHeight)) * 100);
 
