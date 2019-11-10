@@ -3,7 +3,7 @@ $(document).ready(function(){
   // Progress
   $(window).on('scroll orientationchange resize', function(){
     progressBar();
-  };
+  });
 
   // ScrollTop
   $('#topper').click(function(){
