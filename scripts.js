@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   // Progress
   $(document).scroll(function(){
-    var docHeight = $(document).height();
+    var docHeight = $(document).innerHeight();
     var winHeight = $(window).height();
     var scrollTop = $(window).scrollTop();
     var percentage = ((scrollTop / (docHeight - winHeight)) * 100);
