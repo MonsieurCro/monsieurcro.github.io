@@ -120,14 +120,18 @@ footer {
     height: .25em;
 }
 #topper {
+    cursor: pointer;
     position: fixed;
     bottom: 3vw; right: 3vw;
     z-index: 999;
     color: white;
     background-color: #6497B1;
     width: 2em; height: 2em;
+    border-radius: 2px;
     text-align: center;
     font-size: 1.3em; line-height: 2em;
+    -webkit-box-shadow: 0 0 40px 0 rgba(10,10,25,.13);
+            box-shadow: 0 0 40px 0 rgba(10,10,25,.13);
     display: none;
     transition: all .3s ease;
 }
