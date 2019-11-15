@@ -1,25 +1,25 @@
 $(document).ready(function(){
+  // Show progressBar & topper if top != 0
+  hasScrolled();
 
-  // Progress
   $(window).on('scroll orientationchange resize', function(){
-    progressBar();
+    hasScrolled();
   });
 
-  $('#menuicon').click(function(){
-    $('#menu').toggleClass('active');
-  });
-
-  // ScrollTop
+  // Scroll to top
   $('#topper').click(function(){
     $('html').animate({
       scrollTop: 0
     }, 'slow');
   });
 
+  // Show submenu on click
+  $('#menuicon').click(function(){
+    $('#menu').toggleClass('active');
+  });
 
 
-
-  function progressBar(){
+  function hasScrolled(){
     // Calc progression
     var docHeight = $(document).height();
     var winHeight = $(window).outerHeight();
@@ -28,7 +28,7 @@ $(document).ready(function(){
 
     $('#progress').css({'width': percentage + '%'});
 
-    // ScrollTop Toggle
+    // Button toggle
     if(percentage > 30){
       $('#topper').show();
     } else {

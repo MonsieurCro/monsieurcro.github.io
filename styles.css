@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&subset=latin-ext');
-/*https://www.color-hex.com/color-palette/1294*/
 
 /*General*/
 * {
@@ -124,9 +123,6 @@ footer {
     vertical-align: middle;
     color: rgba(255, 255, 255, .9);
 }
-#menuicon:hover {
-    color: rgba(255, 255, 255, .7);
-}
 #menu {
     width: 100%;
     padding: .8em 3%;
@@ -142,6 +138,9 @@ footer {
 #menu li {
     font-size: .8em;
     color: ;
+}
+#menuicon:hover, #menu li a:hover {
+    color: rgba(255, 255, 255, .7);
 }
 #progress {
     position: absolute;
@@ -190,7 +189,10 @@ footer {
     footer {
         font-size: 1em;
     }
-    #sticky {
+    #site {
+        text-align: center;
+    }
+    #menu ul {
         justify-content: center;
     }
 }
