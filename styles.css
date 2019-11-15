@@ -6,31 +6,30 @@
 /*General*/
 * {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 html {
-    background-color: #B3CDE0;
     height: auto; min-height: 100vh;
+    background-color: #2d3238;
+    background: #2d3238 url(https://www.kinktalk.com/img/ktbkg.png);
+    background-size: 500px 500px;
+    background-position: 0 0;
 }
 body {
     width: 90%; max-width: 950px;
     margin: 5em auto 0;
     box-sizing: border-box;
     border: 0;
-    border-radius: 5px 5px 0 0;
-    color: black;
-    background-color: white;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .2);
-    height: auto; min-height: 150vh;
+    height: auto; min-height: 120vh;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
 h1, h2, h3 {
     font-weight: bold;
     margin: .2em 0;
-    color: #005B96;
+    color: rgba(255, 255, 255, .9);
 }
 h1 {
     text-align: center;
@@ -85,10 +84,10 @@ footer {
     bottom: 0;
     width: inherit; height: 6vh;
     max-width: inherit;
-    background-color: #03396C;
+    background-color: #1E2125;
+    color: rgba(255, 255, 255, .8);
     font-size: .75em;
     line-height: calc(6vh - 2 * .3em);
-    color: white;
     text-align: center;
     display: block;
 }
@@ -98,9 +97,11 @@ footer {
     top: 0; left: 0; right: 0;
     z-index: 1000;
     padding: .8em 3%;
-    background-color: white;
+    background-color: #1E2125;
+    color: rgba(255, 255, 255, .9);
     opacity: .99;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, .4);
+            box-shadow: 0 1px 10px rgba(0, 0, 0, .4);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,15 +110,15 @@ footer {
     display: inline-block;
     vertical-align: middle;
     padding: 0 .1em;
-    color: #03396C;
+    color: inherit;
 }
 #progress {
     position: absolute;
     left: 0; bottom: 0;
     width: 0%; max-width: 100%;
-    background: rgba(0, 91, 150, .9);
+    background: rgba(255, 255, 255, .8);
     z-index: -1;
-    height: .25em;
+    height: .15em;
 }
 #topper {
     cursor: pointer;
@@ -125,23 +126,36 @@ footer {
     bottom: 3vw; right: 3vw;
     z-index: 999;
     color: white;
-    background-color: #6497B1;
+    background-color: #383C42;
     width: 2em; height: 2em;
     border-radius: 2px;
     text-align: center;
     font-size: 1.3em; line-height: 2em;
-    -webkit-box-shadow: 0 0 40px 0 rgba(10,10,25,.13);
-            box-shadow: 0 0 40px 0 rgba(10,10,25,.13);
+    -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, .3);
+            box-shadow: 0 0 40px 0 rgba(0, 0, 0, .3);
     display: none;
     transition: all .3s ease;
 }
 #topper:hover {
-    background-color: #005B96;
+    background-color: #2D3238;
     transition: all .3s ease;
 }
 .container {
     padding: 3%;
+    margin: 2% auto;
     box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .2);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .2);
+    color: white;
+}
+.container h1, .container h2, .container h3 {
+    color: rgba(255, 255, 255, .3);
+}
+.light {
+    background-color: #383C42;
+}
+.dark {
+    background-color: #2D3238;
 }
 /* Media queries */
 @media screen and (max-width: 450px){
