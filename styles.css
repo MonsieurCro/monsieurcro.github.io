@@ -19,7 +19,7 @@ html {
 }
 body {
     width: 90%; max-width: 950px;
-    margin: 5em auto 0;
+    margin: 7em auto 0;
     box-sizing: border-box;
     border: 0;
     height: auto; min-height: 120vh;
@@ -91,52 +91,76 @@ footer {
     text-align: center;
     display: block;
 }
-.light {
-    background-color: #383C42;
-}
-.dark {
-    background-color: #2D3238;
+.active {
+    display: block !important;
 }
 /*Content*/
 #sticky {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
-    padding: .8em 3%;
+    display: block;
+    box-sizing: border-box;
     background-color: #1E2125;
     color: rgba(255, 255, 255, .9);
-    opacity: .99;
     -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, .4);
             box-shadow: 0 1px 10px rgba(0, 0, 0, .4);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-#logo, #name {
+#sticky a {
+    color: rgba(255, 255, 255, .9);
+    text-decoration: none;
+    padding: 0 .75em;
+}
+#site {
+    padding: .8em 3%;
+}
+#site a > * {
     display: inline-block;
     vertical-align: middle;
     padding: 0 .1em;
-    color: inherit;
+}
+#menuicon {
+    cursor: pointer;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, .9);
+}
+#menuicon:hover {
+    color: rgba(255, 255, 255, .7);
+}
+#menu {
+    width: 100%;
+    padding: .8em 3%;
+    background-color: #2D3238;
+    transition: all .5s ease;
+    display: none;
+}
+#menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0; padding: 0;
+}
+#menu li {
+    font-size: .8em;
+    color: ;
 }
 #progress {
     position: absolute;
-    left: 0; bottom: 0;
+    left: 0; bottom: -.15em;
     width: 0%; max-width: 100%;
     background: rgba(255, 255, 255, .8);
-    z-index: -1;
     height: .15em;
 }
 #topper {
     cursor: pointer;
     position: fixed;
-    bottom: calc(6vh - 1em); right: calc(6vh - 1em);
+    bottom: calc(6vh - .9em); right: calc(6vh - .9em);
     z-index: 999;
     color: white;
     background-color: #383C42;
-    width: 2em; height: 2em;
+    width: 1.8em; height: 1.8em;
     border-radius: 2px;
     text-align: center;
-    font-size: 1.3em; line-height: 2em;
+    font-size: 1.3em; line-height: 1.8em;
     -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, .3);
             box-shadow: 0 0 40px 0 rgba(0, 0, 0, .3);
     display: none;
@@ -152,6 +176,7 @@ footer {
     box-sizing: border-box;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .2);
             box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .2);
+    background-color: #383C42;
     color: white;
 }
 .box h1, .box h2, .box h3 {

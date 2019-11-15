@@ -5,12 +5,19 @@ $(document).ready(function(){
     progressBar();
   });
 
+  $('#menuicon').click(function(){
+    $('#menu').toggleClass('active');
+  });
+
   // ScrollTop
   $('#topper').click(function(){
     $('html').animate({
       scrollTop: 0
     }, 'slow');
   });
+
+
+
 
   function progressBar(){
     // Calc progression
