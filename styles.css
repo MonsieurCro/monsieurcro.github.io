@@ -15,6 +15,14 @@ html {
     background: #2d3238 url(https://www.kinktalk.com/img/ktbkg.png);
     background-size: 500px 500px;
     background-position: 0 0;
+
+    overflow-y: auto;
+    scrollbar-width: none; /*Firefox*/
+    -ms-overflow-style: none;  /*Internet Explorer 10+*/
+}
+html::-webkit-scrollbar { /*WebKit*/
+    width: 0; height: 0;
+    display: none;
 }
 body {
     width: 90%; max-width: 950px;
