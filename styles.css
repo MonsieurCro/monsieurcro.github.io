@@ -26,11 +26,11 @@ html::-webkit-scrollbar { /*WebKit*/
 }
 body {
     width: 90%; max-width: 950px;
-    margin: 0 auto 5em;
-    /*margin-top: 7em;*/
+    margin: 0 auto;
+    padding: 3.25em 0 6vh;
     box-sizing: border-box;
     border: 0;
-    height: auto; min-height: 120vh;
+    height: auto;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
@@ -182,7 +182,7 @@ footer {
     transition: all .3s ease;
 }
 .section {
-    height: 100vh; width: 100%;
+    height: calc(100vh - 3.25em - 6vh); width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,8 +210,8 @@ footer {
     box-shadow: 0 0 1px 10vh rgba(237, 28, 91, .3), 0 0 1px 20vh rgba(237, 28, 91, .1);
 }
 .box {
-    padding: 3%;
-    margin: 2% auto;
+    padding: 2% 3%;
+    margin: 2vh auto;
     box-sizing: border-box;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .2);
             box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .2);
