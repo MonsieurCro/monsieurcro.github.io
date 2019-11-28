@@ -182,7 +182,8 @@ footer {
     transition: all .3s ease;
 }
 .section {
-    height: calc(100vh - 3.25em - 6vh); width: 100%;
+    height: -webkit-fill-available; max-height: calc(100vh - 3.25em - 6vh);
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,6 +199,9 @@ footer {
     width: auto; height: auto;
     max-width: 95%; max-height: 95%;
     margin: 2.5% auto;
+}
+#egg h1 {
+    margin: 5% auto;
 }
 #core {
     width: 15vh; height: 15vh;
