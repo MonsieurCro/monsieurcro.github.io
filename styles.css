@@ -201,32 +201,22 @@ footer {
     margin: 2.5% auto;
 }
 #egg svg .border {
-    fill: #33363A;
+    fill: #1E2125; /*#33363A;*/
 }
 #egg svg .leftBg {
-    fill: #FFFFFA;
+    fill: rgba(255, 255, 250, .9); /*#FFFFFA;*/
 }
 #egg svg .rightBg {
-    fill: #F9F9E4;
+    fill: rgba(249, 249, 228, .6); /*#F9F9E4;*/
 }
 #egg svg .leftSpots {
-    fill: #7BC67B;
+    fill: #383C42; /*#7BC67B;*/
 }
 #egg svg .rightSpots {
-    fill: #54AF79;
+    fill: #2D3238; /*#54AF79;*/
 }
 #egg h1 {
     margin: 5% auto;
-}
-#core {
-    width: 15vh; height: 15vh;
-    margin: auto;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ED1C5B;
-    box-shadow: 0 0 1px 10vh rgba(237, 28, 91, .3), 0 0 1px 20vh rgba(237, 28, 91, .1);
 }
 .box {
     padding: 2% 3%;
