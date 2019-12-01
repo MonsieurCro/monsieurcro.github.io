@@ -18,6 +18,16 @@ $(document).ready(function(){
     $('#menu').toggleClass('active');
   });
 
+  // Yoshi
+  var clicks = 0;
+
+  $('#egg').click(function(){
+    clicks++;
+    if(clicks = 7){
+      console.log('birth');
+      $('.yoshi').show();
+    };
+  });
 
   function hasScrolled(){
     // Calc progression
