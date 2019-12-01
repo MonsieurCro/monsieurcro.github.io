@@ -13,9 +13,11 @@
 }
 html {
     height: auto; min-height: 100vh;
-    background-color: #D4D4D4;
-    background-size: 500px 500px;
-    background-position: 0 0;
+    background-color: #CDCDCD;
+    background: #CDCDCD url(assets/minimal.png);
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
 
     overflow-y: auto;
     scrollbar-width: none; /*Firefox*/
