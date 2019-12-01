@@ -113,7 +113,7 @@ footer {
     display: block;
     box-sizing: border-box;
     background-color: #1C3954;
-    color: rgba(255, 255, 255, .9);
+    color: white;
     -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, .4);
             box-shadow: 0 1px 10px rgba(0, 0, 0, .4);
 }
@@ -151,7 +151,7 @@ footer {
     line-height: .8em;
 }
 #menuicon:hover, #menu li a:hover {
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, .85);
 }
 #progress {
     position: absolute;
@@ -191,33 +191,36 @@ footer {
     justify-content: center;
     flex-direction: column;
 }
-#egg {
+#centerLogo {
     height: 55vh; width: 55vh;
     max-height: 50%; max-width: 90%;
     margin: auto;
     position: relative;
 }
-#egg svg {
+#egg, #yoshi {
     width: auto; height: auto;
     max-width: 100%; max-height: 85%;
     margin: auto;
 }
-#egg svg .border {
+#egg .border {
     fill: #2D3238; /*#33363A;*/
 }
-#egg svg .leftBg {
+#egg .leftBg {
     fill: rgba(255, 255, 255, .75); /*#FFFFFA;*/
 }
-#egg svg .rightBg {
+#egg .rightBg {
     fill: rgba(255, 255, 255, .5); /*#F9F9E4;*/
 }
-#egg svg .leftSpot {
+#egg .leftSpot {
     fill: #E52A6F; /*#7BC67B;*/
 }
-#egg svg .rightSpot {
+#egg .rightSpot {
     fill: #006BD7; /*#54AF79;*/
 }
-#egg h1 {
+#yoshi {
+    display: none;
+}
+#centerLogo h1 {
     color: #2D3238;
     margin: 2.5% auto 0;
 }
@@ -238,9 +241,6 @@ footer {
   position: relative;
   left: calc(50% - .1vw);
   border-left: .2vw solid rgba(255, 255, 255, .75);
-}
-.yoshi {
-    display: none;
 }
 /* Media queries */
 @media screen and (max-width: 450px){
@@ -277,7 +277,7 @@ footer {
   100% { transform: rotate(0deg);    }
 }
 .pulse {
-  animation: pulse 2s infinite;
+  animation: pulse 2s;
 }
 @-webkit-keyframes pulse {
   0%   { -webkit-box-shadow: 0 0 0 0 rgba(237, 28, 91, 0); }

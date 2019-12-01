@@ -19,13 +19,14 @@ $(document).ready(function(){
   });
 
   // Yoshi
-  var clicks = 0;
+  var tap = 0;
 
   $('#egg').click(function(){
-    clicks++;
-    if(clicks = 7){
-      console.log('birth');
-      $('.yoshi').show();
+    tap++;
+
+    if(tap == 7){
+      $('#egg').hide();
+      $('#yoshi').show();
     };
   });
 
