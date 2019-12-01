@@ -118,7 +118,7 @@ footer {
             box-shadow: 0 1px 10px rgba(0, 0, 0, .4);
 }
 #sticky a {
-    color: rgba(255, 255, 255, .9);
+    color: white;
     text-decoration: none;
     padding: 0 .75em;
 }
@@ -133,7 +133,7 @@ footer {
 #menuicon {
     cursor: pointer;
     vertical-align: middle;
-    color: rgba(255, 255, 255, .9);
+    color: white;
 }
 #menu {
     width: 100%;
@@ -147,9 +147,8 @@ footer {
     display: flex;
     list-style: none;
     margin: 0; padding: 0;
-}
-#menu li {
     font-size: .8em;
+    line-height: .8em;
 }
 #menuicon:hover, #menu li a:hover {
     color: rgba(255, 255, 255, .8);
@@ -158,7 +157,7 @@ footer {
     position: absolute;
     left: 0; bottom: -.15em;
     width: 0%; max-width: 100%;
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .95);
     height: .15em;
     transition: all .3s ease;
 }
@@ -220,7 +219,7 @@ footer {
 }
 #egg h1 {
     color: #2D3238;
-    margin: 5% auto 0;
+    margin: 2.5% auto 0;
 }
 .box {
     padding: 2% 3%;
