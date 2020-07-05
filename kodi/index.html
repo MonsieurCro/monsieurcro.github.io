@@ -9,27 +9,31 @@
 			* {
 				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
 			}
+			a {
+				color: #204051;
+			}
+			a:hover {
+				color: #3B6978;
+			}
+			ul {
+				list-style-type: square;
+			}
 			table {
 			  	border-collapse: collapse;
-			  	width: 100%;
-			}
-
-			table td, table th {
-			  border: 1px solid #ddd;
-			  padding: .5em;
 			}
 			table tr:nth-child(even) {
-				background-color: #f2f2f2;
+				background-color: #EEE;
 			}
-			table tr:hover {
-				background-color: #ddd;
+			table td, table th {
+			  	border: 1px solid #AAA;
+			  	padding: .5em .75em;
 			}
 			table th {
-			  padding-top: 12px;
-			  padding-bottom: 12px;
-			  text-align: left;
-			  background-color: #4CAF50;
-			  color: white;
+			  	background-color: #3B6978;
+			  	color: white;
+			}
+			table ul {
+				padding-inline-start: 25px;
 			}
 		</style>
 	</head>
@@ -37,50 +41,51 @@
 		<ul style="list-style-type:square;">
 			<h3>Directs Links</h3>
 
-			<p>[<a href="https://github.com/Kodi-vStream/venom-xbmc-addons/releases/" target="_blank" style="color:black;text-decoration:none;">Github</a>]</p>
-			<li><a href="plugin.video.vstream-0.8.0.zip">plugin.video.vstream-0.8.0.zip</a><td> <i>(Repack for xbmc.gui 5.14.0)</i></td></li>
-			<p>[<a href="https://github.com/jeroenpardon/skin.grid/releases/" target="_blank" style="color:black;text-decoration:none;">Github</a> / <a href="https://github.com/jeroenpardon/skin.grid#add-ons" target="_blank" style="color:black;text-decoration:none;">Add-ons</a>]</p>
-			<li><a href="skin.grid.leia-2.3.5.zip">skin.grid.leia-2.3.5.zip</a></li>
-			<li><a href="resource.uisounds.grid-1.0.zip">resource.uisounds.grid-1.0.zip</a></li>
-			<li><a href="script.skin.helper.service-1.0.11.zip">script.skin.helper.service-1.0.11.zip</a></li>
-			<li><a href="script.skin.helper.widgets-1.0.zip">script.skin.helper.widgets-1.0.zip</a></li>
-			<li><a href="script.skinshortcuts-1.0.16.zip">script.skinshortcuts-1.0.16.zip</a></li>
-			<li><a href="script.watchlist-1.0.zip">script.watchlist-1.0.zip</a></li>
-
 			<table>
-				<!--<caption style="caption-side:bottom"></caption>-->
 				<tr>
 					<th>Add-on</th>
-					<th>Fichier</th>
+					<th>Archive</th>
 					<th>Source</th>
 				</tr>
 				<tr>
 					<td>VStream <i>(Repack for xbmc.gui 5.14.0)</i></td>
-					<td><ul style="list-style-type:square;"><li><a href="plugin.video.vstream-0.8.0.zip">plugin.video.vstream-0.8.0.zip</a></li></ul></td>
+					<td>
+						<ul><li><a href="plugin.video.vstream-0.8.0.zip">plugin.video.vstream-0.8.0.zip</a></li></ul>
+					</td>
 					<td>[<a href="https://github.com/Kodi-vStream/venom-xbmc-addons/releases/" target="_blank" style="color:black;text-decoration:none;">Github</a>]</td>
 				</tr>
 				<tr>
 					<td>GRID</td>
-					<td><ul style="list-style-type:square;"><li><a href="skin.grid.leia-2.3.5.zip">skin.grid.leia-2.3.5.zip</a></li></ul></td>
+					<td>
+						<ul><li><a href="skin.grid.leia-2.3.5.zip">skin.grid.leia-2.3.5.zip</a></li></ul>
+					</td>
 					<td>[<a href="https://github.com/jeroenpardon/skin.grid/releases/" target="_blank" style="color:black;text-decoration:none;">Github</a>]</td>
 				</tr>
 				<tr>
-					<td>Add-ons</td>
-					<td><ul style="list-style-type:square;"><li><a href="resource.uisounds.grid-1.0.zip">resource.uisounds.grid-1.0.zip</a></li><li><a href="script.skin.helper.service-1.0.11.zip">script.skin.helper.service-1.0.11.zip</a></li><li><a href="script.skin.helper.widgets-1.0.zip">script.skin.helper.widgets-1.0.zip</a></li><li><a href="script.skinshortcuts-1.0.16.zip">script.skinshortcuts-1.0.16.zip</a></li><li><a href="script.watchlist-1.0.zip">script.watchlist-1.0.zip</a></li></ul></td>
+					<td>GRID Required Add-ons</td>
+					<td>
+						<ul>
+							<li><a href="resource.uisounds.grid-1.0.zip">resource.uisounds.grid-1.0.zip</a></li>
+							<li><a href="script.skin.helper.service-1.0.11.zip">script.skin.helper.service-1.0.11.zip</a></li>
+							<li><a href="script.skin.helper.widgets-1.0.zip">script.skin.helper.widgets-1.0.zip</a></li>
+							<li><a href="script.skinshortcuts-1.0.16.zip">script.skinshortcuts-1.0.16.zip</a></li>
+							<li><a href="script.watchlist-1.0.zip">script.watchlist-1.0.zip</a></li>
+						</ul>
+					</td>
 					<td>[<a href="https://github.com/jeroenpardon/skin.grid#add-ons" target="_blank" style="color:black;text-decoration:none;">Github</a>]</td>
 				</tr>
 			</table>
 			
 			<h3>Official Add-ons</h3>
 
-			<li><a href="https://kodi.tv/addon/plugins-video-add-ons/catch-tv-more" target="_blank" style="color:black;">Catch-Up TV & More</a></li>
-			<li><a href="https://kodi.tv/addon/plugins-video-add-ons/playon-browser" target="_blank" style="color:black;">PlayOn</a></li>
-			<li><a href="https://kodi.tv/addon/plugins-video-add-ons/plutotv" target="_blank" style="color:black;">Pluto.TV</a></li>
+			<li><a href="https://kodi.tv/addon/plugins-video-add-ons/catch-tv-more" target="_blank">Catch-Up TV & More</a></li>
+			<li><a href="https://kodi.tv/addon/plugins-video-add-ons/playon-browser" target="_blank">PlayOn</a></li>
+			<li><a href="https://kodi.tv/addon/plugins-video-add-ons/plutotv" target="_blank">Pluto.TV</a></li>
 
 			<h3>Repositories</h3>
 
-			<li>VStream [<a href="https://kodi-vstream.github.io/repo/" target="_blank" style="color:black;">https://kodi-vstream.github.io/repo/</a>]</li>
-			<li>Ghost [<a href="http://ghost-repo.de/" target="_blank" style="color:black;">http://ghost-repo.de/</a>]</li>
+			<li>VStream [<a href="https://kodi-vstream.github.io/repo/" target="_blank">https://kodi-vstream.github.io/repo/</a>]</li>
+			<li>Ghost [<a href="http://ghost-repo.de/" target="_blank">http://ghost-repo.de/</a>]</li>
 		</ul>
 	</body>
 </html>
