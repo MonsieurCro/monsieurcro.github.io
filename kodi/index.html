@@ -3,11 +3,37 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-		<title>Kodi</title>
+		<title>Kodi miCro Repo</title>
+		<link rel="shortcut icon" href="https://kodi.tv/sites/default/themes/kodi/icon.png"/>
 
 		<style>
 			* {
+				outline: none;
+				outline-color: transparent;
+				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				 -khtml-user-select: none;
+				   -moz-user-select: none;
+				    -ms-user-select: none;
+				     -o-user-select: none;
+				        user-select: none;
+				-webkit-user-drag: none;
+	            		user-drag: none;
+				box-sizing: border-box;
 				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+			}
+			.container {
+				width: 95%; max-width: 900px;
+				margin: 0 auto;
+			}
+			.tag {
+				background-color: #17B2E7;
+				color: white;
+				font-size: 80%;
+				padding: .125em .25em;
+				border-radius: 5px;
+				text-transform: uppercase;
 			}
 			a {
 				color: #204051;
@@ -15,11 +41,13 @@
 			a:hover {
 				color: #3B6978;
 			}
-			ul {
-				list-style-type: square;
+			.noLink {
+				color: initial;
+				text-decoration: none;
 			}
 			table {
 			  	border-collapse: collapse;
+			  	width: 100%;
 			}
 			table tr:nth-child(odd) {
 				background-color: #EEE;
@@ -33,36 +61,44 @@
 			  	color: white;
 			}
 			table ul {
-				padding-inline-start: 25px;
+				list-style-type: square;
+				padding-inline-start: calc(.25em + .75em);
+				margin: 0;
 			}
 		</style>
 	</head>
 	<body>
-		<ul style="list-style-type:square;">
+		<div class="container">
+			<h2><span class="tag">Repo</span> https://monsieurcro.github.io/kodi/</h2>
+
 			<h3>Directs Links</h3>
 
 			<table>
 				<tr>
 					<th>Add-on</th>
-					<th>Archive</th>
+					<th>Type</th>
+					<th>Archive(s)</th>
 					<th>Source</th>
 				</tr>
 				<tr>
 					<td>VStream</td>
+					<td>Plugin Video</td>
 					<td>
 						<ul><li><a href="plugin.video.vstream-0.8.0.zip">plugin.video.vstream-0.8.0.zip</a></li></ul>
 					</td>
-					<td>[<a href="https://github.com/Kodi-vStream/venom-xbmc-addons/releases/" target="_blank" style="color:black;text-decoration:none;">Github</a>]</td>
+					<td>[<a href="https://github.com/Kodi-vStream/venom-xbmc-addons/releases/" target="_blank" class="noLink">Github</a>]</td>
 				</tr>
 				<tr>
-					<td>GRID <i>(Repack for xbmc.gui 5.14.0)</i></td>
+					<td>GRID <i>(xbmc.gui 5.14.0 Repack)</i></td>
+					<td>Skin</td>
 					<td>
 						<ul><li><a href="skin.grid.leia-2.3.5.zip">skin.grid.leia-2.3.5.zip</a></li></ul>
 					</td>
-					<td>[<a href="https://github.com/jeroenpardon/skin.grid/releases/" target="_blank" style="color:black;text-decoration:none;">Github</a>]</td>
+					<td>[<a href="https://github.com/jeroenpardon/skin.grid/releases/" target="_blank" class="noLink">Github</a>]</td>
 				</tr>
 				<tr>
 					<td>GRID Required Add-ons</td>
+					<td>Resources / Scripts</td>
 					<td>
 						<ul>
 							<li><a href="resource.uisounds.grid-1.0.zip">resource.uisounds.grid-1.0.zip</a></li>
@@ -72,27 +108,74 @@
 							<li><a href="script.watchlist-1.0.zip">script.watchlist-1.0.zip</a></li>
 						</ul>
 					</td>
-					<td>[<a href="https://github.com/jeroenpardon/skin.grid#add-ons" target="_blank" style="color:black;text-decoration:none;">Github</a>]</td>
+					<td>[<a href="https://github.com/jeroenpardon/skin.grid#add-ons" target="_blank" class="noLink">Github</a>]</td>
 				</tr>
 				<tr>
 					<td>cCloud</td>
+					<td>Repository</td>
 					<td><ul><li><a href="repository.ccloud-1.0.zip">repository.ccloud-1.0.zip</a></li></ul></td>
-					<td>[<a href="https://github.com/darknessally/firerises/tree/master/zips/" target="_blank" style="color:black;text-decoration:none;">Github</a>]</td>
+					<td>[<a href="https://github.com/darknessally/firerises/tree/master/zips/" target="_blank" class="noLink">Github</a>]</td>
 				</tr>
 			</table>
 			
 			<h3>Official Add-ons</h3>
 
-			<li><a href="https://kodi.tv/addon/plugins-video-add-ons/catch-tv-more" target="_blank">Catch-Up TV & More</a></li>
-			<li><a href="https://kodi.tv/addon/plugins-video-add-ons/playon-browser" target="_blank">PlayOn</a></li>
-			<li><a href="https://kodi.tv/addon/pvr-client/pvr-iptv-simple-client" target="_blank">PVR IPTV Simple Client</a> [<a href="https://atlasweb.net/comment-configurer-pvr-iptv-client-simple-kodi/" target="_blank" style="color:black;text-decoration:none;">Tuto</a>]</li>
-			<br>
-			<li>myList [<a href="list.iptv.m3u" target="_blank">list.iptv.m3u</a>] (BE/FR - Updated on 05/07/20)</li>
+			<table>
+				<tr>
+					<th>Add-on</th>
+					<th>Type</th>
+					<th>Store Link</th>
+					<th>Notes</th>
+				</tr>
+				<tr>
+					<td>Catch-Up TV & More</td>
+					<td>Plugin Video</td>
+					<td>
+						<ul><li><a href="https://kodi.tv/addon/plugins-video-add-ons/catch-tv-more/" target="_blank">Kodi.tv</a></li></ul>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>PlayOn Browser</td>
+					<td>Plugin Video</td>
+					<td>
+						<ul><li><a href="https://kodi.tv/addon/plugins-video-add-ons/playon-browser/" target="_blank">Kodi.tv</a></li></ul>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>PVR IPTV Simple Client</td>
+					<td>PVR Client</td>
+					<td>
+						<ul><li><a href="https://kodi.tv/addon/pvr-client/pvr-iptv-simple-client/" target="_blank">Kodi.tv</a></li></ul>
+					</td>
+					<td>[<a href="https://atlasweb.net/comment-configurer-pvr-iptv-client-simple-kodi/" target="_blank" class="noLink">Tuto</a>] / List BE/FR [<a href="list.iptv.m3u">list.iptv.m3u</a>] <i>(Upd. 05/07/20)</i></td>
+				</tr>
+			</table>
 
 			<h3>Repositories</h3>
 
-			<li>VStream [<a href="https://kodi-vstream.github.io/repo/" target="_blank">https://kodi-vstream.github.io/repo/</a>]</li>
-			<li>Ghost [<a href="http://ghost-repo.de/" target="_blank">http://ghost-repo.de/</a>]</li>
-		</ul>
+			<table>
+				<tr>
+					<th>Repo</th>
+					<th>Link</th>
+					<th>Content</th>
+				</tr>
+				<tr>
+					<td>VStream</td>
+					<td>
+						[<a href="https://kodi-vstream.github.io/repo/" target="_blank">https://kodi-vstream.github.io/repo/</a>]
+					</td>
+					<td>VStream <i>(auto-update)</i> + F4M</td>
+				</tr>
+				<tr>
+					<td>Ghost</td>
+					<td>
+						[<a href="http://ghost-repo.de/" target="_blank">http://ghost-repo.de/</a>]
+					</td>
+					<td>?</td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
