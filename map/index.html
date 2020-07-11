@@ -58,6 +58,13 @@
 				width: 0; height: 0;
 				display: none;
 			}
+			#version {
+				color: white;
+				font-size: .5em;
+				position: absolute;
+				bottom: 0; right: 0; top: auto; left: auto;
+				z-index: 999;
+			}
 			.modal {
 				width: 95%; max-width: 900px; height: 90vh;
 				margin: auto;
@@ -155,6 +162,7 @@
 			<h3 class="title">Map</h3>
 			<div id="custom_map"></div>
 		</div>
+		<div id="version">v0.1</div>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -173,7 +181,7 @@
 			    });
 
 			    // Read markers
-				$.getJSON('./markers.js', function(data){
+				$.getJSON('./markers.json', function(data){
 					$.each(data.markers, function(i, data){
 						console.log(data.name, data.coord, data.image, data.description);
 
