@@ -145,11 +145,11 @@
 			    margin: 0 auto;
 			    font-weight: 700;
 			}
-			.mapboxgl-popup-content p.coord {
+			.mapboxgl-popup-content .coord {
 				margin: 0 auto;
 				font-weight: 300;
 			}
-			.mapboxgl-popup-content p:not(.coord) {
+			.mapboxgl-popup-content p {
 				padding-top: .5rem;
     			border-top: 1px solid #EEE;
     			margin: .5rem auto 0;
@@ -162,7 +162,7 @@
 			<h3 class="title">Map</h3>
 			<div id="custom_map"></div>
 		</div>
-		<div id="version">v0.1.3</div>
+		<div id="version">v0.1.4</div>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -182,16 +182,19 @@
 			    // Read markers
 				$.getJSON('./markers.json', function(data){
 					$.each(data.markers, function(i, data){
+						
+						var markerContent = '';
+						if(data.image.trim().length > 0){ markerContent += '<img src="' + data.image + '" alt="" title=""/>' };
+						if(data.name.trim().length > 0){ markerContent += '<h3>' + data.name + '</h3>' };
+						if(data.coord.length > 0){ markerContent += '<span class="coord">' + data.coord[0] + ' | ' + data.coord[1] + '</span>' };
+						if(data.descr.trim().length > 0){ markerContent += '<p>' + data.descr + '</p>' };
+						if(data.link.length > 0){ markerContent += '<a href="' + data.link[1] + '" target="_blank">' + data.link[0] + '</a>' };
+
 						// Write markers
 						new mapboxgl.Marker({ anchor:'center' })
 						.setLngLat({lon: data.coord[0], lat: data.coord[1]})
 						.setPopup(new mapboxgl.Popup({ offset: 27.5 })
-							.setHTML([
-								'<img src="' + data.image + '" alt="" title=""/>',
-								'<h3>' + data.name + '</h3>',
-								'<p class="coord">' + data.coord[0] + ' | ' + data.coord[1] + '</p>',
-								'<p>' + data.description + '</p>'
-							].join(''))
+							.setHTML(markerContent)
 						)
 						.addTo(map); // .togglePopup();
 					});

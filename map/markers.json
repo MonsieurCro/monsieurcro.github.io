@@ -4,15 +4,17 @@
       "tags": [],
       "name": "Binche",
       "coord": [4.165556, 50.410722],
-      "image": "https://live.staticflickr.com/65535/49112033288_e2e25d757b_b.jpg",
-      "description": "Description"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Binche_JPG01.jpg/420px-Binche_JPG01.jpg",
+      "descr": "Binche [bɛ̃ʃ] (en wallon Bince) est une ville francophone de Belgique située en Région wallonne dans la province de Hainaut. Elle est célèbre pour son carnaval et son patrimoine architectural. Binche est située dans la région du Centre sur l'axe reliant les villes de Mons et de Charleroi.",
+      "link": ["Wikipédia", "https://fr.wikipedia.org/wiki/Binche"]
     },
     {
       "tags": [],
       "name": "",
       "coord": [],
       "image": "",
-      "description": ""
+      "descr": "",
+      "link": []
     }
   ]
 }
