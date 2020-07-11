@@ -9,15 +9,15 @@
       "link": ["Wikipédia", "https://fr.wikipedia.org/wiki/Binche"]
     },
     {
-      "tags": ["Urbex"],
+      "tags": ["Urbex", "Visited"],
       "name": "Triage-Lavoir du Charbonnage Sainte-Barbe",
       "coord": [4.171667, 50.4275],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Renovated_triage-lavoir-de-peronnes_hainaut_belgium_2010_march_DSC3765.jpg/360px-Renovated_triage-lavoir-de-peronnes_hainaut_belgium_2010_march_DSC3765.jpg",
-      "descr": "En 1954, le lavoir de Péronnes est inauguré, avec l’aide du plan Marshall. Il est capable de traiter 400 tonnes de charbon à l'heure mais n’allait fonctionner durant seulement quinze ans et fut donc fermé en 1969. Il sera classé à l’Institut du Patrimoine Wallon en 2003 afin d'éviter toute démolition.",
+      "descr": "En 1954, le lavoir de Péronnes est inauguré, avec l’aide du plan Marshall. Il est capable de traiter 400 tonnes de charbon à l'heure mais n’allait fonctionner que durant seulement quinze ans et fut donc fermé en 1969. Il sera classé à l’Institut du Patrimoine Wallon en 2003 afin d'éviter toute démolition.",
       "link": ["Wikipédia", "https://fr.wikipedia.org/wiki/Charbonnage_de_Ressaix"]
     },
     {
-      "tags": ["Urbex"],
+      "tags": ["Urbex", "Visited"],
       "name": "Terrils de la Courte",
       "coord": [4.198788, 50.418165],
       "image": "",
@@ -25,7 +25,7 @@
       "link": ["Wallonie.be", "http://biodiversite.wallonie.be/nl/1827-terrils-de-la-courte.html?IDD=251661040&IDC=1881"]
     },
     {
-      "tags": ["Urbex"],
+      "tags": ["Urbex", "Visited"],
       "name": "Cokeries et Houillères d'Anderlues",
       "coord": [4.268048, 50.414359],
       "image": "https://spaque.be/wp-content/uploads/2020/01/large_cokerieanderlues20069.jpg",

@@ -75,7 +75,7 @@
             		    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .25);
             	position: relative;
 			}
-			.modal .close, .modal h3.title {
+			.modal .close, .modal h3.title, .modal .menu {
 			    position: absolute;
 			    top: 0; bottom: auto;
 			    margin: 0;
@@ -94,24 +94,44 @@
 				left: 1.5rem; right: auto;
 				z-index: 1;
 			}
+			.modal .menu {
+				right: calc(.75rem + 2.25rem);
+			}
+			.modal .menu button {
+				padding: .25rem .5rem;
+				border: 1px solid #EEE;
+				border-radius: 2px;
+			}
+			.modal .menu button.active {
+				border-color: #333;
+				background-color: #EEE;
+			}
 			.modal #custom_map {
 				width: 100%; height: 100%;
 			}
 			.mapboxgl-marker {
-				width: 35px; height: 35px;
-				background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDggNDg7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA0OCA0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgaWQ9Ikljb25zIj48Zz48Zz48cGF0aCBkPSJNMjQuMDQxLDM4LjM3NjRjLTAuMTcsMC0wLjMxNS0wLjEyMTEtMC4zNDQ4LTAuMjg5MWwtMC42MTcxLTMuNDk0MWwtMC4wMDU0LTkuOTA5MiAgICAgYzAtMC4xOTM0LDAuMTU2Ny0wLjM0OTYsMC4zNTAxLTAuMzQ5NmgxLjIyMjZjMC4xOTM0LDAsMC4zNTAxLDAuMTU2MiwwLjM1MDEsMC4zNDk2djkuODQ4NmwtMC42MTA4LDMuNTUzNyAgICAgYy0wLjAyODgsMC4xNjgtMC4xNzQzLDAuMjkwMS0wLjM0NDIsMC4yOTAxSDI0LjA0MXoiIHN0eWxlPSJmaWxsOiNDQ0NDQ0M7Ii8+PC9nPjxnPjxyZWN0IGhlaWdodD0iMS45NTMxIiBzdHlsZT0ib3BhY2l0eTowLjE7IiB3aWR0aD0iMS45MjI4IiB4PSIyMy4wNzM3IiB5PSIyNy4zMzU1Ii8+PC9nPjxwYXRoIGQ9Ik0zMi4wNzYsMjcuNjg1NGMwLjAxMTYtMC4wNjk5LDAuMDExNi0wLjE1MTQsMC4wMTE2LTAuMjIxM2MwLTAuNDI0OC0wLjA4NjEtMC44NDgzLTAuMjUyOS0xLjIzOTEgICAgYy0wLjE2MjEtMC4zODAxLTAuMzk5LTAuNzI3NC0wLjY5MjYtMS4wMTgyYy0wLjIzNjYtMC4yMzQ1LTAuNTA2MS0wLjQyMTEtMC43OTg3LTAuNTc4NiAgICBjLTAuMjgwNy0wLjE1MTItMC42MTE2LTAuMjA5OC0wLjkxMDItMC4zMjc3Yy0wLjg1MjYtMC4zMzY4LTEuNjgwNC0wLjg0MTgtMi4yNjMyLTEuNTU5OCAgICBjLTAuMjgzNy0wLjM0OTUtMC4yMjk2LTAuNjg2Mi0wLjIyOTYtMS4xMDk0YzAtMC4yNzkyLDAtMC41NTg0LDAtMC44Mzc3YzAtMC4zNDQyLDAtMC42ODg1LDAtMS4wMzI3YzAtMC4zODIzLDAtMC43NjQ3LDAtMS4xNDcgICAgYzAtMC4zOTM1LDAtMC43ODcsMC0xLjE4MDRjMC0wLjM3NzcsMC0wLjc1NTQsMC0xLjEzMzFjMC0wLjMzNSwwLTAuNjcsMC0xLjAwNWMwLTAuMjY1MywwLTAuNTMwNywwLTAuNzk2ICAgIGMwLTAuMTkzMywwLjAwMDItMC4zODY1LTAuMDAwOC0wLjU3OThjLTAuMDAwNy0wLjEyMjcsMC4wOTY4LTAuMjM2OSwwLjE2MzEtMC4zMzUzYzAuMDc3My0wLjExNDksMC4xNjE3LTAuMjI1MSwwLjI1MjctMC4zMjk2ICAgIGMwLjE4MDMtMC4yMDcxLDAuMzg2NS0wLjM5MTYsMC42MTMzLTAuNTQ2NGMwLjE3NTYtMC4xMTk4LDAuMzYyNC0wLjIyMjcsMC41NTYxLTAuMzFjMC4xNjkzLTAuMDc2MywwLjM1MjctMC4xMDk4LDAuNTMxOS0wLjE1NDEgICAgYzAuMTc2My0wLjA0MzUsMC4zMzgtMC4xMTcsMC40ODExLTAuMjMwNGMwLjE5MTUtMC4xNTE3LDAuMzQwOS0wLjM1NSwwLjQyNy0wLjU4MzdjMC4wNTYxLTAuMTQ5MSwwLjA4NDktMC4zMDgsMC4wODQ5LTAuNDY3MyAgICBjMC0wLjczMzYtMC42MDU1LTEuMzM5Mi0xLjMzOTItMS4zMzkyaC0xLjc3MDFoLTUuOTM5aC0xLjcyMzZjLTAuNzI1NCwwLTEuMzM5MSwwLjYxMzctMS4zMzkyLDEuMzM5MiAgICBjMCwwLjUzMjIsMC4zMzg2LDEuMDI1OCwwLjgyODcsMS4yMjkzYzAuMDg4MSwwLjAzNjUsMC4xODA0LDAuMDYzMywwLjI3NDUsMC4wNzk0YzAuMjY4NSwwLjA0NTgsMC41MTMxLDAuMTcwOSwwLjc0NjYsMC4zMTAyICAgIGMwLjIyNDUsMC4xMzQsMC40MzM4LDAuMjkzMiwwLjYyMDYsMC40NzYxYzAuMTI5NSwwLjEyNjcsMC4yNDc5LDAuMjY0NywwLjM1NDEsMC40MTE1YzAuMDkyLDAuMTI3MSwwLjI0MDIsMC4yOTU4LDAuMjM5MiwwLjQ1ODcgICAgYy0wLjAwMTcsMC4yNjY3LTAuMDAxLDAuNTMzMy0wLjAwMSwwLjhjMCwwLjI5MjQsMCwwLjU4NDcsMCwwLjg3NzFjMCwwLjM1MzYsMCwwLjcwNzEsMCwxLjA2MDdjMCwwLjM4NzIsMCwwLjc3NDQsMCwxLjE2MTYgICAgYzAsMC4zOTMyLDAsMC43ODY1LDAsMS4xNzk4YzAsMC4zNzE5LDAsMC43NDM3LDAsMS4xMTU1YzAsMC4zMjI5LDAsMC42NDU3LDAsMC45Njg2YzAsMC4yNDYzLDAsMC40OTI2LDAsMC43Mzg5ICAgIGMwLDAuMjY1MSwwLjAyOTgsMC40OTUzLTAuMTMxMiwwLjcyMzFjLTAuNjA2OCwwLjg1ODItMS41OTYsMS40OTMyLTIuNTgyMSwxLjgyNDhjLTAuNTU5LDAuMTUxNC0xLjA0ODEsMC40NDI2LTEuNDQ0LDAuODI2OSAgICBjLTAuNTcwNiwwLjU4MjItMC45MzE2LDEuMzg1Ny0wLjkzMTYsMi4yNTkxYzAsMC4wNjk5LDAsMC4xNTE0LDAuMDExNiwwLjIyMTNIMzIuMDc2eiIgc3R5bGU9ImZpbGw6I0U1MjA0NjsiLz48cGF0aCBkPSJNMjAuNjg4NSwxMi4yMjM0YzAuOTMwMSwwLjQ2NTEsMS4xMzI4LDEuNzE3MSwxLjEzMjgsMS43MTcxdjguMzYwMSAgICBjMCwwLjM1NTYtMC4xMDkyLDAuNzA3MS0wLjMxMzUsMC45OTg1Yy0wLjE5NjMsMC4yNzk4LTAuNDU3OSwwLjUwNjgtMC43MTI1LDAuNzMxOGMtMC4yNiwwLjIyOTgtMC41MzcsMC40MjktMC44NDMyLDAuNTkzNCAgICBjLTAuMTU5OSwwLjA4NTgtMC4zMjU3LDAuMTY1OS0wLjQ5NSwwLjIzMTJjLTAuMjcxNywwLjEwNDktMC41NjM3LDAuMTM0Mi0wLjg0NTIsMC4yMDI2ICAgIGMtMC42NDQ4LDAuMTU2Ni0xLjIyNDgsMC41MzIzLTEuNTExOSwxLjE0NTZjLTAuMDg1MSwwLjE4MTgtMC4xNDMzLDAuMzc2Ny0wLjE3MjIsMC41NzU0ICAgIGMtMC4wMDE4LDAuMDEyNS0wLjAyNTUsMC4yNDM2LTAuMDE4MywwLjI0MzZoMC43MDY2Yy0wLjAyNjcsMCwwLjA2NzEtMC40MTgyLDAuMDgwOS0wLjQ1NjcgICAgYzAuMDQ2LTAuMTI3OSwwLjExMjQtMC4yNDc4LDAuMTk2LTAuMzU1YzAuMjA4Mi0wLjI2NzIsMC41MTA5LTAuNDQ0NiwwLjgyNTgtMC41NTgxYzAuNDA5LTAuMTQ3MywwLjg0NjItMC4xNjA0LDEuMjQ5OC0wLjMzMjMgICAgYzAuMDgyNC0wLjAzNTEsMC4xNTM1LTAuMDg2MSwwLjIzODktMC4xMTgzYzEuMTAyMS0wLjU1OTksMS43MDQ4LTEuMzA1LDIuMDAzMy0xLjc4OTRjMC4xNjc3LTAuMjcyLDAuMjUwMS0wLjU4MjcsMC4yNDY4LTAuOTAyMyAgICBsLTAuMDg3Ny04LjQ5ODVDMjIuMzY5OSwxMi41NDUzLDIwLjY4ODUsMTIuMjIzNCwyMC42ODg1LDEyLjIyMzR6IiBzdHlsZT0iZmlsbDojRjczMTYxOyIvPjwvZz48L2c+PC9zdmc+');
 				background-size: contain;
-				background-position: left bottom;
+				background-position: center;
 				background-repeat: no-repeat;
+			}
+			.marker-city {
 				border-radius: 0;
 				cursor: pointer;
+				width: 25px; height: 25px;
+				background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNjAgNjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYwIDYwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBzdHlsZT0iZmlsbDojQjAyNzIxOyIgZD0iTTUzLjc5MiwyOC4wMjhMMzAsOS42ODhMNi4yMDgsMjguMDI4Yy0xLjIyOCwwLjk0Ni0yLjk3NCwwLjgwMS00LjAyOC0wLjMzNWwwLDANCgljLTEuMTk1LTEuMjg3LTEuMDMzLTMuMzIsMC4zNS00LjQwMmwyNS40My0xOS44OTVMMzAsMS41bDIuMDQxLDEuODk2bDI1LjQzLDE5Ljg5NWMxLjM4MywxLjA4MiwxLjU0NSwzLjExNSwwLjM1LDQuNDAybDAsMA0KCUM1Ni43NjYsMjguODI5LDU1LjAyLDI4Ljk3NCw1My43OTIsMjguMDI4eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6I0IwMjcyMTsiIGQ9Ik01My43OTIsMjguMDI4TDMwLDkuNjg4TDYuMjA4LDI4LjAyOGMtMS4yMjgsMC45NDYtMi45NzQsMC44MDEtNC4wMjgtMC4zMzVsMCwwDQoJYy0xLjE5NS0xLjI4Ny0xLjAzMy0zLjMyLDAuMzUtNC40MDJsMjUuNDMtMTkuODk1TDMwLDEuNWwyLjA0MSwxLjg5NmwyNS40MywxOS44OTVjMS4zODMsMS4wODIsMS41NDUsMy4xMTUsMC4zNSw0LjQwMmwwLDANCglDNTYuNzY2LDI4LjgyOSw1NS4wMiwyOC45NzQsNTMuNzkyLDI4LjAyOHoiLz4NCjxwb2x5Z29uIHN0eWxlPSJmaWxsOiNFMEUxRTI7IiBwb2ludHM9IjMwLDkuNjg4IDcsMjcuNDE3IDcsMjcuNSA3LDU3LjUgNTMsNTcuNSA1MywyNy41IDUzLDI3LjQxNyAiLz4NCjxnPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNFMEUxRTI7IiBkPSJNNTksNDcuNWMtMC41NTMsMC0xLDAuNDQ4LTEsMXYxaC0xdi0xYzAtMC41NTItMC40NDctMS0xLTFzLTEsMC40NDgtMSwxdjFoLTJjLTAuNTUzLDAtMSwwLjQ0OC0xLDENCgkJczAuNDQ3LDEsMSwxaDJ2M2gtMmMtMC41NTMsMC0xLDAuNDQ4LTEsMXMwLjQ0NywxLDEsMWgydjFjMCwwLjU1MiwwLjQ0NywxLDEsMXMxLTAuNDQ4LDEtMXYtMWgxdjFjMCwwLjU1MiwwLjQ0NywxLDEsMQ0KCQlzMS0wLjQ0OCwxLTF2LTlDNjAsNDcuOTQ4LDU5LjU1Myw0Ny41LDU5LDQ3LjV6IE01Nyw1NC41di0zaDF2M0g1N3oiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRTBFMUUyOyIgZD0iTTcsNTEuNWMwLjU1MywwLDEtMC40NDgsMS0xcy0wLjQ0Ny0xLTEtMUg1di0xYzAtMC41NTItMC40NDctMS0xLTFzLTEsMC40NDgtMSwxdjFIMnYtMQ0KCQljMC0wLjU1Mi0wLjQ0Ny0xLTEtMXMtMSwwLjQ0OC0xLDF2OWMwLDAuNTUyLDAuNDQ3LDEsMSwxczEtMC40NDgsMS0xdi0xaDF2MWMwLDAuNTUyLDAuNDQ3LDEsMSwxczEtMC40NDgsMS0xdi0xaDINCgkJYzAuNTUzLDAsMS0wLjQ0OCwxLTFzLTAuNDQ3LTEtMS0xSDV2LTNIN3ogTTMsNTQuNUgydi0zaDFWNTQuNXoiLz4NCjwvZz4NCjxyZWN0IHg9IjE1IiB5PSIyNi41IiBzdHlsZT0iZmlsbDojNTU2MDgwOyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjgiLz4NCjxyZWN0IHg9IjE1IiB5PSI0MC41IiBzdHlsZT0iZmlsbDojNTU2MDgwOyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEwIi8+DQo8cmVjdCB4PSIzMyIgeT0iMjYuNSIgc3R5bGU9ImZpbGw6IzU1NjA4MDsiIHdpZHRoPSIxMiIgaGVpZ2h0PSI4Ii8+DQo8cmVjdCB4PSIzMyIgeT0iNDAuNSIgc3R5bGU9ImZpbGw6IzU1NjA4MDsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNyIvPg0KPHJlY3QgeD0iMzMiIHk9IjI2LjUiIHN0eWxlPSJmaWxsOiM3MzgzQkY7IiB3aWR0aD0iMTIiIGhlaWdodD0iNiIvPg0KPHJlY3QgeD0iMTUiIHk9IjI2LjUiIHN0eWxlPSJmaWxsOiM3MzgzQkY7IiB3aWR0aD0iMTIiIGhlaWdodD0iMi43NjUiLz4NCjxwb2x5Z29uIHN0eWxlPSJmaWxsOiM3MzgzQkY7IiBwb2ludHM9IjIyLDQ0LjUgMjIsNDAuNSAyMCw0MC41IDIwLDQ0LjUgMTUsNDQuNSAxNSw0Ni41IDIwLDQ2LjUgMjAsNTAuNSAyMiw1MC41IDIyLDQ2LjUgMjcsNDYuNSANCgkyNyw0NC41ICIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=');
 			}
-			.mapboxgl-marker svg {
+			.marker-urbex {
+				border-radius: 0;
+				cursor: pointer;
+				width: 30px; height: 30px;
+				background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTggNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU4IDU4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojNTU2MDgwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgeDE9IjI5IiB5MT0iMjgiIHgyPSIyOSIgeTI9IjU3Ii8+DQo8Y2lyY2xlIHN0eWxlPSJmaWxsOiNERDM1MkU7IiBjeD0iMjkiIGN5PSIxNCIgcj0iMTQiLz4NCjxjaXJjbGUgc3R5bGU9ImZpbGw6I0Y3NjM2MzsiIGN4PSIyNCIgY3k9IjEwIiByPSIzIi8+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==');
+			}
+			/*.mapboxgl-marker svg {
 				display: none;
-			}
+			}*/
 			.mapboxgl-popup {
-				width: 90%; max-width: 175px !important;
-			    height: auto; max-height: 90%;
+				width: calc(100% - 2*1rem); max-width: 250px !important;
+			    height: auto; max-height: calc(100% - 2*1rem);
 			    overflow: hidden;
 			    /*Fix it*/
 			    transform: translate(1rem, 1rem) !important;
@@ -168,46 +188,85 @@
 	<body>
 		<div class="modal">
 			<button type="button" class="close" aria-label="Close">✕</button>
-			<h3 class="title">Map</h3>
+			<h3 class="title">Urbex Map</h3>
+			<div class="menu">
+				<button id="streets" class="active">Streets</button>
+				<button id="hybrid">Satellite</button>
+			</div>
 			<div id="custom_map"></div>
 		</div>
-		<div id="version">v0.1.5</div>
+		<div id="version">Last updated on 11/07/2020 • v0.1.6</div>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				// Create Map
-				// https://docs.mapbox.com/mapbox-gl-js/examples/
-				// https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/
+				// https://docs.mapbox.com/mapbox-gl-js/api/markers/
 
 				mapboxgl.accessToken = 'pk.eyJ1IjoibXJjcm8iLCJhIjoiY2tjZ29oZWhrMG0zdDMxbHB0b3J5bmU5ciJ9.MOQlOXhtgBSOccVP48pQfQ';
-				var map = new mapboxgl.Map({
-	      			container: 'custom_map',
-			      	style: 'https://api.maptiler.com/maps/streets/style.json?key=RwhwbQ8iAXKzXz4nDnsR',
-			      	center: [4.165556, 50.410722],
-			      	zoom: 6.5,
-			      	attributionControl: false
-			    });
+				
+				if (!mapboxgl.supported()){
+					alert('Sorry, your browser does not support this dynamic map.');
+				} else {
+					// Create map
+					var map = new mapboxgl.Map({
+		      			container: 'custom_map',
+				      	style: 'https://api.maptiler.com/maps/streets/style.json?key=RwhwbQ8iAXKzXz4nDnsR',
+				      	center: [4.165556, 50.410722],
+				      	zoom: 10,
+				      	attributionControl: false
+				    });
 
-			    // Read markers
-				$.getJSON('./markers.json', function(data){
-					$.each(data.markers, function(i, data){
-						
-						var markerContent = '';
-						if(data.image.trim().length > 0){ markerContent += '<img src="' + data.image + '" alt="" title=""/>' };
-						if(data.name.trim().length > 0){ markerContent += '<h3>' + data.name + '</h3>' };
-						if(data.coord.length > 0){ markerContent += '<span class="coord">' + data.coord[0] + ' | ' + data.coord[1] + '</span>' };
-						if(data.descr.trim().length > 0){ markerContent += '<p>' + data.descr + '</p>' };
-						if(data.link.length > 0){ markerContent += '<p><a href="' + data.link[1] + '" target="_blank">' + data.link[0] + '</a></p>' };
+				    // Read markers
+					$.getJSON('https://monsieurcro.github.io/map/markers.json', function(data){
+						$.each(data.markers, function(i, data){
+							
+							// Fetch popup content
+							var markerContent = '';
+							if(data.image.trim().length > 0){ markerContent += '<img src="' + data.image + '" alt="" title=""/>' };
+							if(data.name.trim().length > 0){ markerContent += '<h3>' + data.name + '</h3>' };
+							if(data.coord.length > 0){ markerContent += '<span class="coord">' + data.coord[0] + ' | ' + data.coord[1] + ' <a href="https://www.google.com/maps/place/' + data.coord[1] + ',' + data.coord[0] + '" target="_blank">🗺️</a></span>' };
+							if(data.descr.trim().length > 0){ markerContent += '<p>' + data.descr + '</p>' };
+							if(data.link.length > 0){ markerContent += '<p><a href="' + data.link[1] + '" target="_blank">' + data.link[0] + '</a></p>' };
 
-						// Write markers
-						new mapboxgl.Marker({ anchor:'center' })
-						.setLngLat({lon: data.coord[0], lat: data.coord[1]})
-						.setPopup(new mapboxgl.Popup({ offset: 37.5 })
-							.setHTML(markerContent)
-						)
-						.addTo(map); // .togglePopup();
+							// Create a DOM element
+							var DOMarker = document.createElement('div');
+							DOMarker.className = 'mapboxgl-marker marker-' + data.tags[0].toLowerCase();
+
+							// Write markers
+							new mapboxgl.Marker(DOMarker, { anchor: 'bottom' })
+							.setLngLat(data.coord)
+							.setPopup(new mapboxgl.Popup({ offset: 27.5 })
+								.setHTML(markerContent)
+							)
+							.addTo(map); // .togglePopup();
+						});
+
+						// Add fullscreen control
+						map.addControl(
+							new mapboxgl.FullscreenControl()
+						);
+
+						// Disable map rotation
+						map.dragRotate.disable();
+						map.touchZoomRotate.disableRotation();
+
+						// Add geolocate control
+						map.addControl(
+							new mapboxgl.GeolocateControl({
+								positionOptions: {
+									enableHighAccuracy: true
+								},
+								trackUserLocation: true
+							})
+						);
+
+						// Update style
+						$('.menu button').click(function(){
+							$('.active').removeClass('active');
+							map.setStyle('https://api.maptiler.com/maps/' + $(this).attr('id') + '/style.json?key=RwhwbQ8iAXKzXz4nDnsR');
+							$(this).addClass('active');
+						});
 					});
-				});
+				};
 			});
 		</script>
 	</body>
