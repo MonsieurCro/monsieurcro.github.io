@@ -167,7 +167,6 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				// Create Map
-
 				// https://docs.mapbox.com/mapbox-gl-js/examples/
 				// https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/
 
@@ -183,8 +182,6 @@
 			    // Read markers
 				$.getJSON('./markers.json', function(data){
 					$.each(data.markers, function(i, data){
-						console.log(data.name, data.coord, data.image, data.description);
-
 						// Write markers
 						new mapboxgl.Marker({ anchor:'center' })
 						.setLngLat(data.coord)
@@ -192,7 +189,7 @@
 							.setHTML([
 								'<img src="' + data.image + '" alt="" title=""/>',
 								'<h3>' + data.name + '</h3>',
-								'<p class="coord">' + data.coord + '</p>',
+								'<p class="coord">' + data.coord[0] + ' | ' + data.coord[1] + '</p>',
 								'<p>' + data.description + '</p>'
 							].join(''))
 						)
