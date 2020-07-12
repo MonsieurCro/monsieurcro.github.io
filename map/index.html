@@ -51,8 +51,6 @@
 				overflow-y: auto;
 				scrollbar-width: none;
 				-ms-overflow-style: none;
-
-				background-color: #333;
 			}
 			html::-webkit-scrollbar {
 				width: 0; height: 0;
@@ -60,11 +58,18 @@
 			}
 			body {
 				margin: 0; padding: 0;
-				overflow: hidden;
+				background-color: #333;
+			}
+			.centerer { /* Centering content */
+				width: 100vw; height: 100vh;
+				display: flex;
+  				align-items: center;
+  				justify-content: center;
 			}
 			.modal {
-				width: 100%; max-width: 900px; height: 100vh;
-				margin: 0 auto;
+				width: 100vw; max-width: 950px;
+				height: 100vh; max-height: 550px;
+				margin: auto;
 				background-color: white;
 				padding: 3em 1em 1em;
 				-webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, .25);
@@ -124,6 +129,13 @@
 				width: 30px; height: 30px;
 				background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTggNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU4IDU4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojNTU2MDgwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgeDE9IjI5IiB5MT0iMjgiIHgyPSIyOSIgeTI9IjU3Ii8+DQo8Y2lyY2xlIHN0eWxlPSJmaWxsOiNERDM1MkU7IiBjeD0iMjkiIGN5PSIxNCIgcj0iMTQiLz4NCjxjaXJjbGUgc3R5bGU9ImZpbGw6I0Y3NjM2MzsiIGN4PSIyNCIgY3k9IjEwIiByPSIzIi8+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==');
 			}
+			.marker-visited {
+				-webkit-filter: grayscale(100%);
+   				   -moz-filter: grayscale(100%);
+   					-ms-filter: grayscale(100%);
+   					 -o-filter: grayscale(100%);
+   					    filter: grayscale(100%);
+			}
 			.mapboxgl-popup {
 				width: calc(100% - 2*1rem); max-width: 250px !important;
 			    height: auto; max-height: calc(100% - 2*1rem);
@@ -155,7 +167,7 @@
 			}
 			.mapboxgl-popup-content img {
 			    width: auto; max-width: 80%;
-			    height: auto; max-height: 100%;
+			    height: auto; max-height: 20vh;
 			    margin: .25rem auto 0;
 			}
 			.mapboxgl-popup-content h3 {
@@ -183,7 +195,7 @@
 				color: #333;
 				background-color: white;
 				font-size: .5rem;
-				padding: .15rem 0 0 .15rem;
+				padding: .15rem 0 0 .20rem;
 				position: absolute;
 				bottom: 1rem; right: 1rem; top: auto; left: auto;
 				z-index: 999;
@@ -191,15 +203,17 @@
 		</style>
 	</head>
 	<body>
-		<div class="modal">
-			<!--<button type="button" class="close" aria-label="Close">✕</button>-->
-			<h3 class="title">Urbex Map</h3>
-			<div class="menu">
-				<button id="streets" class="active">Streets</button>
-				<button id="hybrid">Satellite</button>
+		<div class="centerer">
+			<div class="modal">
+				<!--<button type="button" class="close" aria-label="Close">✕</button>-->
+				<h3 class="title">🗺️ Urbex Map</h3>
+				<div class="menu">
+					<button id="streets" data-map="streets" class="active">Streets</button>
+					<button id="satellite" data-map="hybrid">Satellite</button>
+				</div>
+				<div id="custom_map"></div>
+				<div id="version">Last updated on 12/07/2020 • v0.1.8</div>
 			</div>
-			<div id="custom_map"></div>
-			<div id="version">Last updated on 12/07/2020 • v0.1.7</div>
 		</div>
 
 		<script type="text/javascript">
@@ -222,7 +236,7 @@
 
 				    // Read markers
 					$.getJSON('https://monsieurcro.github.io/map/markers.json', function(data){
-						$.each(data.markers, function(i, data){
+						$.each(data.markers, function(index, data){
 							
 							// Fetch popup content
 							var markerContent = '';
@@ -231,10 +245,15 @@
 							if(data.coord.length > 0){ markerContent += '<span class="coord">' + data.coord[0] + ' | ' + data.coord[1] + ' <a href="https://www.google.com/maps/place/' + data.coord[1] + ',' + data.coord[0] + '" target="_blank">🗺️</a></span>' };
 							if(data.descr.trim().length > 0){ markerContent += '<p>' + data.descr + '</p>' };
 							if(data.link.length > 0){ markerContent += '<p><a href="' + data.link[1] + '" target="_blank">' + data.link[0] + '</a></p>' };
+							
+							var markerClasses = 'mapboxgl-marker';
+							$.each(data.tags, function(index, data){
+								markerClasses += ' marker-' + data.toLowerCase();
+							});
 
 							// Create a DOM element
 							var DOMarker = document.createElement('div');
-							DOMarker.className = 'mapboxgl-marker marker-' + data.tags[0].toLowerCase();
+							DOMarker.className = markerClasses;
 
 							// Write markers
 							new mapboxgl.Marker(DOMarker, { anchor: 'bottom' })
@@ -267,7 +286,7 @@
 						// Update style
 						$('.menu button').click(function(){
 							$('.active').removeClass('active');
-							map.setStyle('https://api.maptiler.com/maps/' + $(this).attr('id') + '/style.json?key=RwhwbQ8iAXKzXz4nDnsR');
+							map.setStyle('https://api.maptiler.com/maps/' + $(this).attr('data-map') + '/style.json?key=RwhwbQ8iAXKzXz4nDnsR');
 							$(this).addClass('active');
 						});
 					});
