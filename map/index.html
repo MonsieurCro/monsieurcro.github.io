@@ -236,6 +236,7 @@
 				// https://docs.mapbox.com/mapbox-gl-js/api/markers/
 
 				mapboxgl.accessToken = 'pk.eyJ1IjoibXJjcm8iLCJhIjoiY2tjZ29oZWhrMG0zdDMxbHB0b3J5bmU5ciJ9.MOQlOXhtgBSOccVP48pQfQ';
+				console.log('Mapbox GL JS version', mapboxgl.version);
 				
 				if (!mapboxgl.supported()){
 					alert('Sorry, your browser does not support this dynamic map.');
@@ -246,6 +247,7 @@
 				      	style: 'https://api.maptiler.com/maps/streets/style.json?key=RwhwbQ8iAXKzXz4nDnsR',
 				      	center: [4.165556, 50.410722],
 				      	zoom: 10,
+				      	dragRotate: false,
 				      	attributionControl: false
 				    });
 
@@ -271,22 +273,36 @@
 							DOMarker.className = markerClasses;
 
 							// Write marker
-							new mapboxgl.Marker(DOMarker, { anchor: 'bottom' })
+							new mapboxgl.Marker(DOMarker, {
+								anchor: 'bottom'
+							})
 							.setLngLat(data.coord)
-							.setPopup(new mapboxgl.Popup({ offset: 27.5 })
+							.setPopup(new mapboxgl.Popup({
+									offset: 27.5
+								})
 								.setHTML(markerContent)
 							)
 							.addTo(map); // .togglePopup();
 						});
 
+						// Add scale indicator
+						map.addControl(
+							new mapboxgl.ScaleControl()
+						, 'bottom-left');
+
 						// Add fullscreen control
 						map.addControl(
 							new mapboxgl.FullscreenControl()
-						);
+						, 'top-right');
 
-						// Disable map rotation
-						map.dragRotate.disable();
-						map.touchZoomRotate.disableRotation();
+						// Add zoom and rotation controls
+						map.addControl(
+							new mapboxgl.NavigationControl({
+								showCompass: false,
+								showZoom: true,
+								visualizePitch: false
+							})
+						, 'top-right');
 
 						// Add geolocate control
 						map.addControl(
@@ -296,7 +312,7 @@
 								},
 								trackUserLocation: true
 							})
-						);
+						, 'top-right');
 
 						// Update map style
 						$('.menu button').click(function(){
