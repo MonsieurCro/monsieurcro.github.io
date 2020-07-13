@@ -31,6 +31,14 @@
       "image": "https://spaque.be/wp-content/uploads/2020/01/large_cokerieanderlues20069.jpg",
       "descr": "Les activités de traitement de la houille, de cokéfaction et de carbochimie se sont déroulées entre 1906 et 2002. En bordure, le charbonnage est actif de 1850 à 1967. Le terril, constitué par les charbonnages précités, a été réexploité entre 1983 et 2002 pour la valorisation du charbon résiduel. Depuis la fermeture de l’exploitation en 2002, le site est resté à l’état de friche. Il comprend aujourd’hui les bâtiments de l’ancienne usine, globalement dans un état de délabrement avancé, ainsi que des prairies et un terril d’une trentaine d’hectares au sommet duquel les eaux polluées de la cokerie étaient déversées.",
       "link": ["Spaque.be", "https://spaque.be/realisations/cokerie-danderlues/"]
+    },
+    {
+      "tags": ["Urbex"],
+      "name": "Tour de Refroidissement de Charleroi",
+      "coord": [4.381496, 50.394711],
+      "image": "http://www.nicau.be/images/industrie/energetique.jpg",
+      "descr": "La centrale électrique de Monceau-sur-Sambre fut construite en 1921 par Intercom, devenu par la suite Electrabel et est, à cette époque, l'une des centrales les plus importantes du pays. Dans les années 50, la centrale est modernisée et une nouvelle unité est construite. Dans les années 70, des modifications permettent à la centrale de brûler le gaz de Haut Fourneau. Pour se faire, une gigantesque conduite est construite entre le site du HF4 et la centrale électrique. Les unités stoppèrent leur production en 2007 mais certaines installations, comme les pompes furent maintenues en activité jusqu'en 2010. Quant aux bâtiments, ils sont toujours à l'abandon en 2016.",
+      "link": ["Nicau.be", "http://www.nicau.be/energetique.html"] 
     }
   ]
 }
