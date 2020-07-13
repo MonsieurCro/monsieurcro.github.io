@@ -66,11 +66,10 @@
 				margin: 0; padding: 0;
 				background-color: #333;
 			}
-			.centerer { /* Centering content */
+			.centerer {
 				width: 100%; height: 100%;
 				display: flex;
   				align-items: center;
-  				justify-content: center;
 			}
 			.modal {
 				width: 100%; max-width: 1000px;
@@ -82,7 +81,7 @@
 				   -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, .25);
             		    box-shadow: 0 0 0 3px rgba(0, 0, 0, .25);
             	position: relative;
-            	overflow-y: hidden;
+            	overflow: hidden;
 			}
 			.modal .close, .modal h3.title, .modal .menu {
 			    position: absolute;
@@ -109,16 +108,17 @@
 			}
 			.modal .menu button {
 				padding: .25rem .5rem;
-				border-radius: 4px;
+				border-radius: 4px 0 4px 0;
 				-webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
 				   -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
     				    box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
     			margin-left: .25rem;
+    			line-height: 100%;
 			}
 			.modal .menu button:hover:not(.active) {
 				background-color: rgba(0, 0, 0, .05);
 			}
-			/*.modal .menu button:focus,*/ .modal .menu button.active {
+			.modal .menu button.active {
 				-webkit-box-shadow: 0 0 2px 2px #0096FF;
 				   -moz-box-shadow: 0 0 2px 2px #0096FF;
     				    box-shadow: 0 0 2px 2px #0096FF;
@@ -134,28 +134,37 @@
 			.marker-city {
 				border-radius: 0;
 				cursor: pointer;
-				width: 25px; height: 25px;
-				background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNjAgNjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYwIDYwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBzdHlsZT0iZmlsbDojQjAyNzIxOyIgZD0iTTUzLjc5MiwyOC4wMjhMMzAsOS42ODhMNi4yMDgsMjguMDI4Yy0xLjIyOCwwLjk0Ni0yLjk3NCwwLjgwMS00LjAyOC0wLjMzNWwwLDANCgljLTEuMTk1LTEuMjg3LTEuMDMzLTMuMzIsMC4zNS00LjQwMmwyNS40My0xOS44OTVMMzAsMS41bDIuMDQxLDEuODk2bDI1LjQzLDE5Ljg5NWMxLjM4MywxLjA4MiwxLjU0NSwzLjExNSwwLjM1LDQuNDAybDAsMA0KCUM1Ni43NjYsMjguODI5LDU1LjAyLDI4Ljk3NCw1My43OTIsMjguMDI4eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6I0IwMjcyMTsiIGQ9Ik01My43OTIsMjguMDI4TDMwLDkuNjg4TDYuMjA4LDI4LjAyOGMtMS4yMjgsMC45NDYtMi45NzQsMC44MDEtNC4wMjgtMC4zMzVsMCwwDQoJYy0xLjE5NS0xLjI4Ny0xLjAzMy0zLjMyLDAuMzUtNC40MDJsMjUuNDMtMTkuODk1TDMwLDEuNWwyLjA0MSwxLjg5NmwyNS40MywxOS44OTVjMS4zODMsMS4wODIsMS41NDUsMy4xMTUsMC4zNSw0LjQwMmwwLDANCglDNTYuNzY2LDI4LjgyOSw1NS4wMiwyOC45NzQsNTMuNzkyLDI4LjAyOHoiLz4NCjxwb2x5Z29uIHN0eWxlPSJmaWxsOiNFMEUxRTI7IiBwb2ludHM9IjMwLDkuNjg4IDcsMjcuNDE3IDcsMjcuNSA3LDU3LjUgNTMsNTcuNSA1MywyNy41IDUzLDI3LjQxNyAiLz4NCjxnPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNFMEUxRTI7IiBkPSJNNTksNDcuNWMtMC41NTMsMC0xLDAuNDQ4LTEsMXYxaC0xdi0xYzAtMC41NTItMC40NDctMS0xLTFzLTEsMC40NDgtMSwxdjFoLTJjLTAuNTUzLDAtMSwwLjQ0OC0xLDENCgkJczAuNDQ3LDEsMSwxaDJ2M2gtMmMtMC41NTMsMC0xLDAuNDQ4LTEsMXMwLjQ0NywxLDEsMWgydjFjMCwwLjU1MiwwLjQ0NywxLDEsMXMxLTAuNDQ4LDEtMXYtMWgxdjFjMCwwLjU1MiwwLjQ0NywxLDEsMQ0KCQlzMS0wLjQ0OCwxLTF2LTlDNjAsNDcuOTQ4LDU5LjU1Myw0Ny41LDU5LDQ3LjV6IE01Nyw1NC41di0zaDF2M0g1N3oiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRTBFMUUyOyIgZD0iTTcsNTEuNWMwLjU1MywwLDEtMC40NDgsMS0xcy0wLjQ0Ny0xLTEtMUg1di0xYzAtMC41NTItMC40NDctMS0xLTFzLTEsMC40NDgtMSwxdjFIMnYtMQ0KCQljMC0wLjU1Mi0wLjQ0Ny0xLTEtMXMtMSwwLjQ0OC0xLDF2OWMwLDAuNTUyLDAuNDQ3LDEsMSwxczEtMC40NDgsMS0xdi0xaDF2MWMwLDAuNTUyLDAuNDQ3LDEsMSwxczEtMC40NDgsMS0xdi0xaDINCgkJYzAuNTUzLDAsMS0wLjQ0OCwxLTFzLTAuNDQ3LTEtMS0xSDV2LTNIN3ogTTMsNTQuNUgydi0zaDFWNTQuNXoiLz4NCjwvZz4NCjxyZWN0IHg9IjE1IiB5PSIyNi41IiBzdHlsZT0iZmlsbDojNTU2MDgwOyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjgiLz4NCjxyZWN0IHg9IjE1IiB5PSI0MC41IiBzdHlsZT0iZmlsbDojNTU2MDgwOyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEwIi8+DQo8cmVjdCB4PSIzMyIgeT0iMjYuNSIgc3R5bGU9ImZpbGw6IzU1NjA4MDsiIHdpZHRoPSIxMiIgaGVpZ2h0PSI4Ii8+DQo8cmVjdCB4PSIzMyIgeT0iNDAuNSIgc3R5bGU9ImZpbGw6IzU1NjA4MDsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNyIvPg0KPHJlY3QgeD0iMzMiIHk9IjI2LjUiIHN0eWxlPSJmaWxsOiM3MzgzQkY7IiB3aWR0aD0iMTIiIGhlaWdodD0iNiIvPg0KPHJlY3QgeD0iMTUiIHk9IjI2LjUiIHN0eWxlPSJmaWxsOiM3MzgzQkY7IiB3aWR0aD0iMTIiIGhlaWdodD0iMi43NjUiLz4NCjxwb2x5Z29uIHN0eWxlPSJmaWxsOiM3MzgzQkY7IiBwb2ludHM9IjIyLDQ0LjUgMjIsNDAuNSAyMCw0MC41IDIwLDQ0LjUgMTUsNDQuNSAxNSw0Ni41IDIwLDQ2LjUgMjAsNTAuNSAyMiw1MC41IDIyLDQ2LjUgMjcsNDYuNSANCgkyNyw0NC41ICIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=');
+				width: 35px; height: 35px;
+			}
+			.marker-city, .tag-city span { 
+				background-image: url('./castle.svg');
 			}
 			.marker-urbex {
 				border-radius: 0;
 				cursor: pointer;
 				width: 30px; height: 30px;
-				background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTggNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU4IDU4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojNTU2MDgwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgeDE9IjI5IiB5MT0iMjgiIHgyPSIyOSIgeTI9IjU3Ii8+DQo8Y2lyY2xlIHN0eWxlPSJmaWxsOiNERDM1MkU7IiBjeD0iMjkiIGN5PSIxNCIgcj0iMTQiLz4NCjxjaXJjbGUgc3R5bGU9ImZpbGw6I0Y3NjM2MzsiIGN4PSIyNCIgY3k9IjEwIiByPSIzIi8+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==');
+			}
+			.marker-urbex, .tag-urbex span {
+				background-image: url('./sword.svg');
 			}
 			.marker-visited {
-				-webkit-filter: grayscale(100%);
-   				   -moz-filter: grayscale(100%);
-   					-ms-filter: grayscale(100%);
-   					 -o-filter: grayscale(100%);
-   					    filter: grayscale(100%);
+				border-radius: 0;
+				cursor: pointer;
+				width: 25px; height: 25px;
+			}
+			.marker-visited, .tag-visited span {
+				background-image: url('./flag.svg') !important;
 			}
 			.mapboxgl-popup {
 				width: calc(100% - 2*1rem); max-width: 250px !important;
 			    height: auto; max-height: calc(100% - 2*1rem);
 			    overflow: hidden;
 			    z-index: 2;
-			    /*Fix it*/
+			    border-radius: 4px 0 4px 0;
+			    -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
+				   -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
+    				    box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
+			    /*Make it sticky*/
 			    transform: translate(1rem, 1rem) !important;
 			}
 			.mapboxgl-popup-tip {
@@ -206,6 +215,19 @@
 				width: 0; height: 0;
 				display: none;
 			}
+			#markersTags button span {
+				background-size: 70% auto;
+			}
+			.button-selected {
+				-webkit-filter: grayscale(75%);
+   				   -moz-filter: grayscale(75%);
+   					-ms-filter: grayscale(75%);
+   					 -o-filter: grayscale(75%);
+   					    filter: grayscale(75%);
+			}
+			.marker-hidden {
+				visibility: hidden !important;
+			}
 			#version {
 				color: #333;
 				background-color: white;
@@ -227,19 +249,17 @@
 					<button id="satellite" data-map="hybrid">Satellite</button>
 				</div>
 				<div id="custom_map"></div>
-				<div id="version">v0.1.9 (12/07/2020)</div>
+				<div id="version">v0.1.10_13072020</div>
 			</div>
 		</div>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				// https://docs.mapbox.com/mapbox-gl-js/api/markers/
-
 				mapboxgl.accessToken = 'pk.eyJ1IjoibXJjcm8iLCJhIjoiY2tjZ29oZWhrMG0zdDMxbHB0b3J5bmU5ciJ9.MOQlOXhtgBSOccVP48pQfQ';
-				console.log('Mapbox GL JS version', mapboxgl.version);
+				//console.log('Mapbox GL JS version', mapboxgl.version);
 				
 				if (!mapboxgl.supported()){
-					alert('Sorry, your browser does not support this dynamic map.');
+					$('#custom_map').text('Sorry, your browser does not support this dynamic map.');
 				} else {
 					// Create map
 					var map = new mapboxgl.Map({
@@ -251,20 +271,36 @@
 				      	attributionControl: false
 				    });
 
+				    // Update map style
+					$('.menu button').click(function(){
+						$('.active').removeClass('active');
+						map.setStyle('https://api.maptiler.com/maps/' + $(this).attr('data-map') + '/style.json?key=RwhwbQ8iAXKzXz4nDnsR');
+						$(this).addClass('active');
+					});
+
 				    // Read markers
 					$.getJSON('https://monsieurcro.github.io/map/markers.json', function(data){
+						var markersTags = [];
+
 						$.each(data.markers, function(index, data){
 							
 							// Fetch popup content
 							var markerContent = '';
+
 							if(data.image.trim().length > 0){ markerContent += '<img src="' + data.image + '" alt="" title=""/>' };
 							if(data.name.trim().length > 0){ markerContent += '<h3>' + data.name + '</h3>' };
 							if(data.coord.length > 0){ markerContent += '<span class="coord">' + data.coord[0] + ' | ' + data.coord[1] + ' <a href="https://www.google.com/maps/place/' + data.coord[1] + ',' + data.coord[0] + '" target="_blank" style="text-decoration:none;">🗺️</a></span>' };
 							if(data.descr.trim().length > 0){ markerContent += '<p>' + data.descr + '</p>' };
 							if(data.link.length > 0){ markerContent += '<p><a href="' + data.link[1] + '" target="_blank">' + data.link[0] + '</a></p>' };
 							
-							var markerClasses = 'mapboxgl-marker';
+							var markerClasses = 'mapboxgl-marker ';
+
 							$.each(data.tags, function(index, data){
+								// Add new tags to the list
+								if($.inArray(data, markersTags) === -1){
+									markersTags.push(data);
+								}
+								// Add classes to the marker from tags
 								markerClasses += ' marker-' + data.toLowerCase();
 							});
 
@@ -282,7 +318,7 @@
 								})
 								.setHTML(markerContent)
 							)
-							.addTo(map); // .togglePopup();
+							.addTo(map); //.togglePopup();
 						});
 
 						// Add scale indicator
@@ -314,12 +350,23 @@
 							})
 						, 'top-right');
 
-						// Update map style
-						$('.menu button').click(function(){
-							$('.active').removeClass('active');
-							map.setStyle('https://api.maptiler.com/maps/' + $(this).attr('data-map') + '/style.json?key=RwhwbQ8iAXKzXz4nDnsR');
-							$(this).addClass('active');
-						});
+						// Show/hide markers
+						if(markersTags.length > 0){
+							$('.mapboxgl-ctrl-top-right div:last-child').after('<div class="mapboxgl-ctrl mapboxgl-ctrl-group" id="markersTags"></div>');
+
+							$.each(markersTags, function(index, data){
+								$('#markersTags').append([
+									'<button type="button" class="tag-' + data.toLowerCase() + ' " data-class="'+ data.toLowerCase() + '" title="Toggle ' + data + '" aria-label="Toggle ' + data + '">',
+									'<span class="mapboxgl-ctrl-icon" aria-hidden="true"></span>',
+									'</button>'
+								].join(''));
+							});
+
+							$('#markersTags button').click(function(){
+								$('.marker-' + $(this).attr('data-class')).toggleClass('marker-hidden');
+								$(this).toggleClass('button-selected');
+							});
+						};		
 					});
 				};
 			});
