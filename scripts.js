@@ -1,33 +1,12 @@
 $(document).ready(function(){
-  // Show progressBar & topper if top != 0
+  $('#topper').click(function(){
+    $('html').animate({ scrollTop: 0 }, 'slow');
+  });
+
   hasScrolled();
 
   $(window).on('scroll orientationchange resize', function(){
     hasScrolled();
-  });
-
-  // Scroll to top
-  $('#topper').click(function(){
-    $('html').animate({
-      scrollTop: 0
-    }, 'slow');
-  });
-
-  // Show submenu on click
-  $('#menuicon').click(function(){
-    $('#menu').toggleClass('active');
-  });
-
-  // Yoshi
-  var tap = 0;
-
-  $('#egg').click(function(){
-    tap++;
-
-    if(tap == 7){
-      $('#egg').hide();
-      $('#yoshi').show();
-    };
   });
 
   function hasScrolled(){
@@ -39,11 +18,11 @@ $(document).ready(function(){
 
     $('#progress').css({'width': percentage + '%'});
 
-    // Button toggle
+    // Toggle button
     if(percentage > 30){
       $('#topper').show();
     } else {
       $('#topper').hide();
-    }
+    };
   };
 });
