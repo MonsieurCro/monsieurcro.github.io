@@ -34,7 +34,6 @@ html::-webkit-scrollbar {
 body {
   width: 100%; height: auto; min-height: 200vh;
   margin: 0; padding: 0;
-  background-color: white;
 }
 button, input[type="button"] {
   -webkit-appearance: none;
@@ -54,6 +53,12 @@ footer {
   background-color: #002F46;
   font-size: 75%;
   text-align: center;
+}
+canvas#particles {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100%; max-width: 100%;
+  height: 100%; max-height: 100%;
 }
 .sticky-nav {
   position: fixed;
@@ -83,6 +88,9 @@ footer {
 .upper-nav {
   background-color: #1C3954;
 }
+.upper-nav img {
+  width: 35px; max-width: 15%; height: auto;
+  vertical-align: middle;
 .upper-nav h3 {
   margin: .25em;
   font-weight: 600;
