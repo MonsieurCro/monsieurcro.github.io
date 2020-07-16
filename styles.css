@@ -91,6 +91,7 @@ canvas#particles {
 .upper-nav img {
   width: 35px; max-width: 15%; height: auto;
   vertical-align: middle;
+}
 .upper-nav h3 {
   margin: .25em;
   font-weight: 600;
