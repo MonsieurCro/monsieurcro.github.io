@@ -68,7 +68,9 @@ document.addEventListener('DOMContentLoaded', function(){
     };
 
     window.addEventListener('resize',function(){
-        particles();
+        setTimeout(function(){
+            particles();
+        }, 500);
     });
     
     window.addEventListener('orientationchange',function(){

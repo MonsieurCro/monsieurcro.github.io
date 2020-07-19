@@ -141,6 +141,7 @@ canvas#particles {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 .centerer {
   width: auto; max-width: 80%;
@@ -153,7 +154,81 @@ canvas#particles {
 #welcome {
   height: 100vh;
   overflow: hidden;
+  text-align: center;
   background-image: url(./assets/mountains-digital-art-minimalist-l9.jpg);
   color: white;
   text-shadow: 0 0 1em #002F46;
+}
+#welcome h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+#welcome svg {
+  width: 100%; height: auto;
+}
+#welcome svg path {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+}
+#welcome svg path:nth-of-type(1) {
+  animation: dash 2s ease forwards 0s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(2) {
+  animation: dash 2s ease forwards .3s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(3) {
+  animation: dash 2s ease forwards .6s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(4) {
+  animation: dash 2s ease forwards .9s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(5) {
+  animation: dash 2s ease forwards 1.2s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(6) {
+  animation: dash 2s ease forwards 1.5s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(7) {
+  animation: dash 2s ease forwards 1.8s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(8) {
+  animation: dash 2s ease forwards 2.1s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(9) {
+  animation: dash 2s ease forwards 2.4s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(10) {
+  animation: dash 2s ease forwards 2.7s, color 1s ease forwards 4s;
+}
+#welcome svg path:nth-of-type(11) {
+  animation: dash 2s ease forwards 3s, color 1s ease forwards 4s;
+}
+@-webkit-keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+@-moz-keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+@-o-keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+@-webkit-keyframes color {
+  to { fill: #1C3954; }
+}
+@-moz-keyframes color {
+  to { fill: #1C3954; }
+}
+@-o-keyframes color {
+  to { fill: #1C3954; }
+}
+@keyframes color {
+  to { fill: #1C3954; }
 }

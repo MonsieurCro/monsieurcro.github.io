@@ -39,6 +39,14 @@
       "image": "http://www.nicau.be/images/industrie/energetique.jpg",
       "descr": "La centrale électrique de Monceau-sur-Sambre fut construite en 1921 par Intercom, devenu par la suite Electrabel et est, à cette époque, l'une des centrales les plus importantes du pays. Dans les années 50, la centrale est modernisée et une nouvelle unité est construite. Dans les années 70, des modifications permettent à la centrale de brûler le gaz de Haut Fourneau. Pour se faire, une gigantesque conduite est construite entre le site du HF4 et la centrale électrique. Les unités stoppèrent leur production en 2007 mais certaines installations, comme les pompes furent maintenues en activité jusqu'en 2010. Quant aux bâtiments, ils sont toujours à l'abandon en 2016.",
       "link": ["Nicau.be", "http://www.nicau.be/energetique.html"] 
+    },
+    {
+      "tags": ["Urbex", "Visited"],
+      "name": "Gare de formation et atelier d'Haine Saint Pierre",
+      "coord": [4.192611, 50.465764],
+      "image": "http://www.garesbelges.be/images/hain/haine_saint_paul_001.jpg",
+      "descr": "Au maximum de son développement, la gare de formation comptait 48 voies. À la fin des années 1970, la gare de formation a été amputée d'une vingtaine de voies afin de créer la nouvelle gare de La Louvière Sud. L'atelier a perdu ses activités d'entretien du matériel au début des années 1990.",
+      "link": ["Garesbelges.be", "http://www.garesbelges.be/haine_saint_paul.htm"] 
     }
   ]
 }
