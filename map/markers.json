@@ -36,9 +36,9 @@
       "tags": ["Urbex", "Visited"],
       "name": "Centrale Monceau \"IM\" et sa Tour de Refroidissement",
       "coord": [4.381496, 50.394711],
-      "image": "https://www.nicau.be/images/industrie/energetique.jpg",
+      "image": "http://www.nicau.be/images/industrie/energetique.jpg",
       "descr": "La centrale électrique de Monceau-sur-Sambre fut construite en 1921 par Intercom, devenu par la suite Electrabel et est, à cette époque, l'une des centrales les plus importantes du pays. Dans les années 1950, la centrale est modernisée et une nouvelle unité est construite. Dans les années 70, des modifications permettent à la centrale de brûler le gaz de Haut Fourneau. Pour se faire, une gigantesque conduite est construite entre le site du HF4 et la centrale électrique. Les unités stoppèrent leur production en 2007 mais certaines installations, comme les pompes furent maintenues en activité jusqu'en 2010.",
-      "link": ["Nicau.be", "https://www.nicau.be/energetique.html"]
+      "link": ["Nicau.be", "http://www.nicau.be/energetique.html"]
     },
     {
       "tags": ["Urbex", "Visited"],
@@ -53,16 +53,16 @@
       "name": "Gare de triage Monceau-Formation",
       "coord": [4.385654, 50.394759],
       "image": "",
-      "descr": "",
-      "link": ["", ""]
+      "descr": "Weird, c'est pas la même... 50°25'49\"N   4°23'29\"E",
+      "link": ["Wikimapia.org", "http://wikimapia.org/1103088/fr/Gare-de-formation-de-Monceau-sur-Sambre"]
     },
     {
       "tags": ["Urbex", "Visited"],
       "name": "Carrière Gralex",
       "coord": [4.393090, 50.380533],
       "image": "https://i.ytimg.com/vi/pJsE9SI0lFA/maxresdefault.jpg",
-      "descr": "La carrière de Mont-sur-Marchienne, près de Charleroi, a été a été exploitée par la SA Gralex. On y a des trouvé de superbes macles de calcite dit aussi chapeaux d’evêque. La carrière a été active jusqu’en 1998 et est désormais ennoyée.",
-      "link": ["", ""]
+      "descr": "La carrière de Mont-sur-Marchienne, près de Charleroi, a été exploitée par la SA Gralex. On y a des trouvé de superbes macles de calcite dit aussi chapeaux d’evêque. La carrière a été active jusqu’en 1998 et est désormais ennoyée.",
+      "link": ["Sagrex.be", "https://www.sagrex.be/fr/node/6823"]
     }
   ]
 }
