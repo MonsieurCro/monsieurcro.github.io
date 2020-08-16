@@ -36,7 +36,7 @@
       "tags": ["Urbex", "Visited"],
       "name": "Centrale Monceau \"IM\" et sa Tour de Refroidissement",
       "coord": [4.381496, 50.394711],
-      "image": "http://www.nicau.be/images/industrie/energetique.jpg",
+      "image": "https://www.nicau.be/images/industrie/energetique.jpg",
       "descr": "La centrale électrique de Monceau-sur-Sambre fut construite en 1921 par Intercom, devenu par la suite Electrabel et est, à cette époque, l'une des centrales les plus importantes du pays. Dans les années 1950, la centrale est modernisée et une nouvelle unité est construite. Dans les années 70, des modifications permettent à la centrale de brûler le gaz de Haut Fourneau. Pour se faire, une gigantesque conduite est construite entre le site du HF4 et la centrale électrique. Les unités stoppèrent leur production en 2007 mais certaines installations, comme les pompes furent maintenues en activité jusqu'en 2010.",
       "link": ["Nicau.be", "https://www.nicau.be/energetique.html"]
     },
@@ -44,13 +44,13 @@
       "tags": ["Urbex", "Visited"],
       "name": "Gare de formation et atelier d'Haine Saint Pierre",
       "coord": [4.192611, 50.465764],
-      "image": "http://www.garesbelges.be/images/hain/haine_saint_paul_001.jpg",
+      "image": "https://www.garesbelges.be/images/hain/haine_saint_paul_001.jpg",
       "descr": "Au maximum de son développement, la gare de formation comptait 48 voies. À la fin des années 1970, elle a été amputée d'une vingtaine de voies afin de créer la nouvelle gare de La Louvière Sud. L'atelier a perdu ses activités d'entretien du matériel au début des années 1990.",
       "link": ["Garesbelges.be", "https://www.garesbelges.be/haine_saint_paul.htm"]
     },
     {
       "tags": ["Urbex", "Visited"],
-      "name": "Atelier SNCB (pas d'infos)",
+      "name": "Gare de triage Monceau-Formation",
       "coord": [4.385654, 50.394759],
       "image": "",
       "descr": "",
