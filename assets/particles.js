@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', function(){
     };
 
     window.addEventListener('resize',function(){
-        setTimeout(function(){
+        clearTimeout(window.resizedFinished);
+        window.resizedFinished = setTimeout(function(){
             particles();
         }, 500);
     });

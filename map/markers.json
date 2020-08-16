@@ -13,7 +13,7 @@
       "name": "Triage-Lavoir du Charbonnage Sainte-Barbe",
       "coord": [4.171667, 50.4275],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Renovated_triage-lavoir-de-peronnes_hainaut_belgium_2010_march_DSC3765.jpg/360px-Renovated_triage-lavoir-de-peronnes_hainaut_belgium_2010_march_DSC3765.jpg",
-      "descr": "En 1954, le lavoir de Péronnes est inauguré, avec l’aide du plan Marshall. Il est capable de traiter 400 tonnes de charbon à l'heure mais n’allait fonctionner que durant seulement quinze ans et fut donc fermé en 1969. Il sera classé à l’Institut du Patrimoine Wallon en 2003 afin d'éviter toute démolition.",
+      "descr": "En 1954, le lavoir de Péronnes est inauguré, avec l’aide du plan Marshall. Il est capable de traiter 400 tonnes de charbon à l'heure, mais il n’allait fonctionner que durant quinze ans seulement et fut fermé en 1969. Il sera classé à l’Institut du Patrimoine Wallon en 2003 afin d'éviter toute démolition.",
       "link": ["Wikipédia", "https://fr.wikipedia.org/wiki/Charbonnage_de_Ressaix"]
     },
     {
@@ -22,31 +22,47 @@
       "coord": [4.198788, 50.418165],
       "image": "",
       "descr": "Le site est formé de quatre terrils et d'un ancien charbonnage localisés au nord-est de Binche, dans une zone fortement urbanisée. La plus grande partie de sa superficie est boisée.",
-      "link": ["Wallonie.be", "http://biodiversite.wallonie.be/nl/1827-terrils-de-la-courte.html?IDD=251661040&IDC=1881"]
+      "link": ["Wallonie.be", "https://biodiversite.wallonie.be/nl/1827-terrils-de-la-courte.html?IDD=251661040&IDC=1881"]
     },
     {
       "tags": ["Urbex", "Visited"],
       "name": "Cokeries et Houillères d'Anderlues",
       "coord": [4.268048, 50.414359],
       "image": "https://spaque.be/wp-content/uploads/2020/01/large_cokerieanderlues20069.jpg",
-      "descr": "Les activités de traitement de la houille, de cokéfaction et de carbochimie se sont déroulées entre 1906 et 2002. En bordure, le charbonnage est actif de 1850 à 1967. Le terril, constitué par les charbonnages précités, a été réexploité entre 1983 et 2002 pour la valorisation du charbon résiduel. Depuis la fermeture de l’exploitation en 2002, le site est resté à l’état de friche. Il comprend aujourd’hui les bâtiments de l’ancienne usine, globalement dans un état de délabrement avancé, ainsi que des prairies et un terril d’une trentaine d’hectares au sommet duquel les eaux polluées de la cokerie étaient déversées.",
+      "descr": "Les activités de traitement de la houille, de cokéfaction et de carbochimie se sont déroulées entre 1906 et 2002. En bordure, le charbonnage fut actif de 1850 à 1967. Le terril, constitué par les charbonnages précités, a été réexploité entre 1983 et 2002 pour la valorisation du charbon résiduel. Depuis la fermeture de l’exploitation en 2002, le site est resté à l’état de friche. Il comprend aujourd’hui les bâtiments de l’ancienne usine, globalement dans un état de délabrement avancé, ainsi que des prairies et un terril d’une trentaine d’hectares au sommet duquel les eaux polluées de la cokerie étaient déversées.",
       "link": ["Spaque.be", "https://spaque.be/realisations/cokerie-danderlues/"]
     },
     {
-      "tags": ["Urbex"],
-      "name": "Tour de Refroidissement de Charleroi",
+      "tags": ["Urbex", "Visited"],
+      "name": "Centrale Monceau \"IM\" et sa Tour de Refroidissement",
       "coord": [4.381496, 50.394711],
       "image": "http://www.nicau.be/images/industrie/energetique.jpg",
-      "descr": "La centrale électrique de Monceau-sur-Sambre fut construite en 1921 par Intercom, devenu par la suite Electrabel et est, à cette époque, l'une des centrales les plus importantes du pays. Dans les années 50, la centrale est modernisée et une nouvelle unité est construite. Dans les années 70, des modifications permettent à la centrale de brûler le gaz de Haut Fourneau. Pour se faire, une gigantesque conduite est construite entre le site du HF4 et la centrale électrique. Les unités stoppèrent leur production en 2007 mais certaines installations, comme les pompes furent maintenues en activité jusqu'en 2010. Quant aux bâtiments, ils sont toujours à l'abandon en 2016.",
-      "link": ["Nicau.be", "http://www.nicau.be/energetique.html"] 
+      "descr": "La centrale électrique de Monceau-sur-Sambre fut construite en 1921 par Intercom, devenu par la suite Electrabel et est, à cette époque, l'une des centrales les plus importantes du pays. Dans les années 1950, la centrale est modernisée et une nouvelle unité est construite. Dans les années 70, des modifications permettent à la centrale de brûler le gaz de Haut Fourneau. Pour se faire, une gigantesque conduite est construite entre le site du HF4 et la centrale électrique. Les unités stoppèrent leur production en 2007 mais certaines installations, comme les pompes furent maintenues en activité jusqu'en 2010.",
+      "link": ["Nicau.be", "https://www.nicau.be/energetique.html"]
     },
     {
       "tags": ["Urbex", "Visited"],
       "name": "Gare de formation et atelier d'Haine Saint Pierre",
       "coord": [4.192611, 50.465764],
       "image": "http://www.garesbelges.be/images/hain/haine_saint_paul_001.jpg",
-      "descr": "Au maximum de son développement, la gare de formation comptait 48 voies. À la fin des années 1970, la gare de formation a été amputée d'une vingtaine de voies afin de créer la nouvelle gare de La Louvière Sud. L'atelier a perdu ses activités d'entretien du matériel au début des années 1990.",
-      "link": ["Garesbelges.be", "http://www.garesbelges.be/haine_saint_paul.htm"] 
+      "descr": "Au maximum de son développement, la gare de formation comptait 48 voies. À la fin des années 1970, elle a été amputée d'une vingtaine de voies afin de créer la nouvelle gare de La Louvière Sud. L'atelier a perdu ses activités d'entretien du matériel au début des années 1990.",
+      "link": ["Garesbelges.be", "https://www.garesbelges.be/haine_saint_paul.htm"]
+    },
+    {
+      "tags": ["Urbex", "Visited"],
+      "name": "Atelier SNCB (pas d'infos)",
+      "coord": [4.385654, 50.394759],
+      "image": "",
+      "descr": "",
+      "link": ["", ""]
+    },
+    {
+      "tags": ["Urbex", "Visited"],
+      "name": "Carrière Gralex",
+      "coord": [4.393090, 50.380533],
+      "image": "https://i.ytimg.com/vi/pJsE9SI0lFA/maxresdefault.jpg",
+      "descr": "La carrière de Mont-sur-Marchienne, près de Charleroi, a été a été exploitée par la SA Gralex. On y a des trouvé de superbes macles de calcite dit aussi chapeaux d’evêque. La carrière a été active jusqu’en 1998 et est désormais ennoyée.",
+      "link": ["", ""]
     }
   ]
 }
