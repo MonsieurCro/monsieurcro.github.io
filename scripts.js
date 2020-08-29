@@ -1,8 +1,16 @@
 $(document).ready(function(){
+  // Scroll to section
+  $('a.scroll').click(function(event){
+    event.preventDefault();
+    $('html').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000, 'linear');
+  });
+
+  // Back to top
   $('#topper').click(function(){
     $('html').animate({ scrollTop: 0 }, 'slow');
   });
 
+  // Progress bar
   hasScrolled();
 
   $(window).on('scroll orientationchange resize', function(){
@@ -16,6 +24,7 @@ $(document).ready(function(){
     var scrollTop = $(window).scrollTop();
     var percentage = ((scrollTop / (docHeight - winHeight)) * 100);
 
+    // Update bar
     $('#progress').css({'width': percentage + '%'});
 
     // Toggle button

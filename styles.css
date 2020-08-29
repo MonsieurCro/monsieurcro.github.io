@@ -232,3 +232,53 @@ canvas#particles {
 @keyframes color {
   to { fill: #1C3954; }
 }
+
+#welcome .scroll {
+  position: absolute;
+  z-index: 3;
+  bottom: calc(25px + 6vh); left: calc(50% - 5px); right: calc(50% - 5px); top: auto;
+}
+/*Adapted from https://codepen.io/nxworld/pen/OyRrGy*/
+#welcome .scroll span {
+  position: absolute;
+  left: calc(50% - 10px); right: calc(50% - 10px); top: auto;
+  width: 20px; height: 20px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: load 2s infinite;
+  animation: load 2s infinite;
+  opacity: 0;
+}
+#welcome .scroll span:nth-of-type(1) {
+  bottom: 24px;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+#welcome .scroll span:nth-of-type(2) {
+  bottom: 12px;
+  -webkit-animation-delay: 5.15s;
+  animation-delay: 5.15s;
+}
+#welcome .scroll span:nth-of-type(3) {
+  bottom: 0;
+  -webkit-animation-delay: 5.3s;
+  animation-delay: 5.3s;
+}
+@-webkit-keyframes load {
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes load {
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes load {
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes load {
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
