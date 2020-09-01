@@ -22,7 +22,7 @@
   font-weight: 400;
 }
 html {
-  width: 100%; height: auto;
+  width: 100%; height: auto; min-height: 100%;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -32,7 +32,7 @@ html::-webkit-scrollbar {
   display: none;
 }
 body {
-  width: 100%; height: auto; min-height: 200vh;
+  width: 100%; height: auto; min-height: 100%;
   margin: 0; padding: 0; /*5.5em .25em 6.25vh*/
 }
 button, input[type="button"] {
@@ -134,7 +134,7 @@ canvas#particles {
   background-color: #525965;
 }
 .section {
-  width: 100%; height: auto;
+  width: 100%; height: auto; min-height: 75vh;
   display: flex;
   align-items: center;
   text-align: center;
@@ -152,10 +152,13 @@ canvas#particles {
   z-index: 3;
 }
 #welcome {
-  height: 100vh;
+  height: 100vh; min-height: -webkit-fill-available; max-height: 100%;
+  z-index: 1003;
   overflow: hidden;
   text-align: center;
   background-image: url(./assets/mountains-digital-art-minimalist-l9.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
   text-shadow: 0 0 1em #002F46;
 }
@@ -236,7 +239,7 @@ canvas#particles {
 #welcome .scroll {
   position: absolute;
   z-index: 3;
-  bottom: calc(25px + 6vh); left: calc(50% - 5px); right: calc(50% - 5px); top: auto;
+  bottom: calc(25px + 2vh); /*was 6vh*/ left: calc(50% - 5px); right: calc(50% - 5px); top: auto;
 }
 /*Adapted from https://codepen.io/nxworld/pen/OyRrGy*/
 #welcome .scroll span {
