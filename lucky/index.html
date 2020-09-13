@@ -39,7 +39,6 @@
 					    transition: all .3s ease;
 				font-family: 'Roboto', Arial, Helvetica, sans-serif;
 				font-weight: 400;
-				color: #333;
 			}
 			button, input[type="button"] {
 				-webkit-appearance: none;
@@ -68,7 +67,7 @@
 				color: #A1A19F;
 				background-color: #2B2D2A;
 			}
-			.dark .modal .window {
+			.dark .modal .window, .dark .modal .window button {
 			    color: #ACACAC;
 				background-color: #1E1E1E;
 			}
@@ -173,26 +172,35 @@
 				width: 0; height: 0;
 				display: none;
 			}
+			.modal .window .section {
+				position: relative;
+				width: 100%;
+				height: 30%;
+				padding: 1rem;
+				margin-bottom: .75rem;
+			}
+			.modal .window .section .buttons {
+				position: absolute;
+				bottom: 1rem; right: 1rem; top: auto; left: auto;
+				text-align: right;
+			}
 			.modal .window a {
 				text-decoration: none;
 			}
-			.modal .window button { /*https://codepen.io/aaroniker/pen/VwwxopM?editors=0100 https://dribbble.com/shots/5498889-Dashboard-Share-Project-DailyUi-010*/
-				color: white;
-				background-color: black;
+			.modal .window button { /*https://dribbble.com/shots/5498889-Dashboard-Share-Project-DailyUi-010*/
 				border-radius: 5px;
-				width: 2.5rem; height: 2.5rem;
+				padding: .5rem;
+				margin-top: .5rem;
 
-				-webkit-transition: all .7s ease;
-			       -moz-transition: all .7s ease;
-					    transition: all .7s ease;
+				color: #B3B5B4;
+				background-color: #ECEAEB;
 			}
 			.modal .window h5 {
 				color: inherit;
 				display: inline-block;
-				border: 1px solid white;
-				border-radius: 5px;
-				width: 20%; height: 2.5rem; line-height: 2.5rem;
-				margin: 0 1rem 0 0; padding: 0 .5rem;
+				margin: 0;
+				font-weight: 700;
+				font-size: 1.5rem;
 			}
 			.modal .window i {
 				color: inherit;
@@ -201,22 +209,6 @@
 				color: inherit;
 				margin-left: .5em;
 				font-weight: 700;
-				display: none;
-			}
-			.modal .window button:hover,.modal .window button:focus, .modal .window button:active {
-				width: auto;
-				padding: 0 .75rem;
-
-				-webkit-transition: all .7s ease;
-			       -moz-transition: all .7s ease;
-					    transition: all .7s ease;
-			}
-			.modal .window button:hover span,.modal .window button:focus span, .modal .window button:active span {
-				display: inline-block;
-			}
-			.modal .window hr {
-				border: none;
-				border-bottom: 1px solid #A1A19F;
 			}
 		</style>
 	</head>
@@ -228,56 +220,66 @@
 					<button class="close" aria-label="Close"></button>
 					<button class="fullscreen" aria-label="Fullscreen"></button>
 					<button class="minimize" aria-label="Minimize"></button>
-					<h3 class="title">Dash_11092020</h3>
+					<h3 class="title">Dash_13092020</h3>
 				</div>
 				<div class="window">
-					<h5>Lucky</h5>
-					<a href="https://app.slack.com/client/T03HZP475/C03HZP48R" target="_blank">
-						<button><i class="fab fa-slack"></i><span>Slack</span></button>
-					</a>
-					<a href="https://mail.google.com/mail/u/1/#inbox" target="_blank">
-						<button><i class="far fa-envelope-open"></i><span>Gmail</span></button>
-					</a>
-					<a href="https://drive.google.com/drive/u/1/folders/0B8cKzUxbcas6OWR3TGNaREpCYVU" target="_blank">
-						<button><i class="fab fa-google-drive"></i><span>Google Drive</span></button>
-					</a>
-					<a href="https://backend.luckycycle.com/backend/index" target="_blank">
-						<button><i class="fas fa-server"></i><span>Back-End</span></button>
-					</a>
-					<a href="https://clients.luckycycle.com/documentation/lucky.html" target="_blank">
-						<button><i class="fas fa-book"></i><span>Documentation</span></button>
-					</a>
-					<hr/>
-					<h5>Dash</h5>
-					<a href="https://trello.com/b/IshAX2cz/dashboard" target="_blank">
-						<button><i class="fab fa-trello"></i><span>Trello</span></button>
-					</a>
-					<a href="https://docs.google.com/spreadsheets/d/1jre3CZvDimfU1hUEkA0JHwL2_9tdRgUjXMP3QcE8QIc/edit?ts=5a6f02d0#gid=945802585" target="_blank">
-						<button><i class="fas fa-route"></i><span>Campaigns</span></button>
-					</a>
-					<a href="https://docs.google.com/spreadsheets/d/1JocaSZJKQGLYfTE1LnS46PqBQxD2vwWAjnKmvKLL_50/edit#gid=0" target="_blank">
-						<button><i class="fas fa-file-invoice-dollar"></i><span>Invoices</span></button>
-					</a>
-					<a href="https://members.silversquare.eu/dashboard" target="_blank">
-						<button><i class="fas fa-building"></i><span>SilverSquare</span></button>
-					</a>
-					<hr/>
-					<h5>Tools</h5>
-					<a href="https://s3.console.aws.amazon.com/s3/buckets/luckycyclefiles/clients/?region=eu-west-1&tab=overview" target="_blank">
-						<button><i class="fab fa-aws"></i><span>Amazon S3</span></button>
-					</a>
-					<a href="https://business.facebook.com/adsmanager/manage/all?act=2349852798668214&business_id=2145351622378191" target="_blank">
-						<button><i class="fab fa-facebook"></i><span>Facebook Ads</span></button>
-					</a>
-					<a href="https://www.facebook.com/ads/tools/text_overlay" target="_blank">
-						<button><i class="fas fa-laptop-code"></i><span>Text Overlay</span></button>
-					</a>
-					<a href="https://lucky.dimitri-gigot.com/" target="_blank">
-						<button><i class="fas fa-code-branch"></i><span>Dim's Server</span></button>
-					</a>
-					<a href="https://regexr.com/" target="_blank">
-						<button><i class="fas fa-code"></i><span>RegEx</span></button>
-					</a>
+					<div class="section">
+						<h5>Lucky</h5>
+						<div class="buttons">
+							<a href="https://app.slack.com/client/T03HZP475/C03HZP48R" target="_blank">
+								<button><i class="fab fa-slack"></i><span>Slack</span></button>
+							</a>
+							<a href="https://mail.google.com/mail/u/1/#inbox" target="_blank">
+								<button><i class="far fa-envelope-open"></i><span>Gmail</span></button>
+							</a>
+							<a href="https://drive.google.com/drive/u/1/folders/0B8cKzUxbcas6OWR3TGNaREpCYVU" target="_blank">
+								<button><i class="fab fa-google-drive"></i><span>Google Drive</span></button>
+							</a>
+							<a href="https://backend.luckycycle.com/backend/index" target="_blank">
+								<button><i class="fas fa-server"></i><span>Back-End</span></button>
+							</a>
+							<a href="https://clients.luckycycle.com/documentation/lucky.html" target="_blank">
+								<button><i class="fas fa-book"></i><span>Documentation</span></button>
+							</a>
+						</div>
+					</div>
+					<div class="section">
+						<h5>Dash</h5>
+						<div class="buttons">
+							<a href="https://trello.com/b/IshAX2cz/dashboard" target="_blank">
+								<button><i class="fab fa-trello"></i><span>Trello</span></button>
+							</a>
+							<a href="https://docs.google.com/spreadsheets/d/1jre3CZvDimfU1hUEkA0JHwL2_9tdRgUjXMP3QcE8QIc/edit?ts=5a6f02d0#gid=945802585" target="_blank">
+								<button><i class="fas fa-route"></i><span>Campaigns</span></button>
+							</a>
+							<a href="https://docs.google.com/spreadsheets/d/1JocaSZJKQGLYfTE1LnS46PqBQxD2vwWAjnKmvKLL_50/edit#gid=0" target="_blank">
+								<button><i class="fas fa-file-invoice-dollar"></i><span>Invoices</span></button>
+							</a>
+							<a href="https://members.silversquare.eu/dashboard" target="_blank">
+								<button><i class="fas fa-building"></i><span>SilverSquare</span></button>
+							</a>
+						</div>
+					</div>
+					<div class="section">
+						<h5>Tools</h5>
+						<div class="buttons">
+							<a href="https://s3.console.aws.amazon.com/s3/buckets/luckycyclefiles/clients/?region=eu-west-1&tab=overview" target="_blank">
+								<button><i class="fab fa-aws"></i><span>Amazon S3</span></button>
+							</a>
+							<a href="https://business.facebook.com/adsmanager/manage/all?act=2349852798668214&business_id=2145351622378191" target="_blank">
+								<button><i class="fab fa-facebook"></i><span>Facebook Ads</span></button>
+							</a>
+							<a href="https://www.facebook.com/ads/tools/text_overlay" target="_blank">
+								<button><i class="fas fa-laptop-code"></i><span>Text Overlay</span></button>
+							</a>
+							<a href="https://lucky.dimitri-gigot.com/" target="_blank">
+								<button><i class="fas fa-code-branch"></i><span>Dim's Server</span></button>
+							</a>
+							<a href="https://regexr.com/" target="_blank">
+								<button><i class="fas fa-code"></i><span>RegEx</span></button>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -285,6 +287,11 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('body').addClass($(location).attr('hash').replace('#', ''));
+
+				$('.section').each(function(index, item){
+					var color = Math.floor(Math.random()*16777215).toString(16) + ''; 
+					$(item).css({'background-color': '#' + color});
+				});
 
 				$('.modal .bar button').click(function(){
 					var action = $(this).attr('class');
