@@ -63,19 +63,23 @@
 				margin: 0; padding: 0;
 				background-color: #EEE;
 			}
+			.dark .modal {
+				background-image: url(./alma-black-5u_QPmekhyI-unsplash.jpg);
+				background-color: #1E1E1E;
+			}
 			.dark .modal .bar {
 				color: #A1A19F;
 				background-color: #2B2D2A;
 			}
-			.dark .modal .window, .dark .modal .window button {
-			    color: #ACACAC;
+			.dark .modal .window button {
+			    color: white;
 				background-color: #1E1E1E;
 			}
 			#blur {
 				position: fixed;
 				width: 105%; height: 105%;
 				top: -2.5%; left: -2.5%; bottom: -2.5%; right: -2.5%;
-				background-image: url(https://source.unsplash.com/random/1920x1080); /*https://source.unsplash.com/*/
+				background-image: url(https://source.unsplash.com/random/1920x1080);
 				background-size: cover;
 				background-position: center;
 				-webkit-filter: blur(10px);
@@ -92,9 +96,14 @@
 				width: 95%; max-width: 1000px;
 				height: 95%; max-height: 600px;
 				margin: auto;
-				-webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, .07);
-				   -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, .07);
-            		    box-shadow: 0 0 0 3px rgba(0, 0, 0, .07);
+				color: black;
+				background-color: white;
+				background-image: url(./isi-parente-RP0FbspqzrM-unsplash.jpg);
+				background-size: cover;
+				background-position: center;
+            	-webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .27);
+				   -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .27);
+            		    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .27);
             	border-radius: 10px;
             	overflow: hidden;
 			}
@@ -104,11 +113,9 @@
 				top: 0; left: 0; right: 0; bottom: auto;
 				width: 100%; height: 2rem;
 				padding: 0 1rem;
-
 				display: flex;
 				-webkit-box-align: center;
 				align-items: center;
-
 				color: #C1C1C3;
 				background-color: white;				
 			}
@@ -131,7 +138,6 @@
 				width: 100%;
 				font-size: .8rem;
 				color: inherit;
-				/*transform: translateX(-30px);*/
 			}
 			.modal.close {
 				display: none;
@@ -146,7 +152,7 @@
 				position: fixed;
 				width: 100%; max-width: 100%;
 				left: 0; top: 0; right: 0; bottom: auto;
-				transform: translateY(calc(-100% + 2rem));
+				transform: translateY(-100%) translateY(2rem);
 				border-radius: 0;
 			}
 			.modal.minimize .bar {
@@ -158,15 +164,12 @@
 			.modal .window {
 				position: absolute;
 				z-index: 1;
-				top: 0; left: 0; right: 0; bottom: 0;
-				width: 100%; height: 100%;
-				padding: 3.5rem 1.5rem 1.5rem;
-				overflow-y: auto;
+				top: 2rem; left: 0; right: 0; bottom: 0;
+				width: 100%; height: calc(100% - 2rem);
+				padding: 5% 10%;
+				overflow-x: hidden; overflow-y: auto;
 				scrollbar-width: none;
 				-ms-overflow-style: none;
-
-				color: #B3B5B4;
-				background-color: #ECEAEB;
 			}
 			.modal .window::-webkit-scrollbar {
 				width: 0; height: 0;
@@ -174,29 +177,48 @@
 			}
 			.modal .window .section {
 				position: relative;
-				width: 100%;
-				height: 30%;
+				width: 100%; height: 30%;
 				padding: 1rem;
 				margin-bottom: .75rem;
 			}
 			.modal .window .section .buttons {
 				position: absolute;
-				bottom: 1rem; right: 1rem; top: auto; left: auto;
+				bottom: 1rem; right: 1rem; top: auto; left: 1rem;
+				width: calc(100% - 2rem); height: auto;
 				text-align: right;
+				padding: 0 .5rem .5rem;
+				border-radius: 5px;
+				-webkit-box-shadow: 0 0 3px 5px rgba(0, 0, 0, .1);
+				   -moz-box-shadow: 0 0 3px 5px rgba(0, 0, 0, .1);
+            		    box-shadow: 0 0 3px 5px rgba(0, 0, 0, .1);
+            	overflow: hidden;
+			}
+			.modal .window .section .buttons::before {
+				content: '';
+				position: absolute;
+				width: 105%; height: 105%;
+				top: -2.5%; left: -2.5%; bottom: -2.5%; right: -2.5%;
+				background-color: rgba(255, 255, 255, .35);
+				-webkit-filter: blur(20px);
+					    filter: blur(20px);
+				z-index: -1;
 			}
 			.modal .window a {
 				text-decoration: none;
 			}
-			.modal .window button { /*https://dribbble.com/shots/5498889-Dashboard-Share-Project-DailyUi-010*/
+			.modal .window button {
 				border-radius: 5px;
 				padding: .5rem;
 				margin-top: .5rem;
-
-				color: #B3B5B4;
+				color: black;
 				background-color: #ECEAEB;
 			}
+			.modal .window button:hover {
+				opacity: .8;
+			}
 			.modal .window h5 {
-				color: inherit;
+				color: white;
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, .27);
 				display: inline-block;
 				margin: 0;
 				font-weight: 700;
@@ -283,15 +305,14 @@
 				</div>
 			</div>
 		</div>
-
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('body').addClass($(location).attr('hash').replace('#', ''));
 
-				$('.section').each(function(index, item){
+				/*$('.section').each(function(index, item){
 					var color = Math.floor(Math.random()*16777215).toString(16) + ''; 
 					$(item).css({'background-color': '#' + color});
-				});
+				});*/
 
 				$('.modal .bar button').click(function(){
 					var action = $(this).attr('class');
