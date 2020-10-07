@@ -22,7 +22,7 @@
   font-weight: 400;
 }
 html {
-  width: 100%; height: auto; min-height: 100%;
+  width: 100%; height: 100%;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -32,7 +32,7 @@ html::-webkit-scrollbar {
   display: none;
 }
 body {
-  width: 100%; height: auto; min-height: 100%;
+  width: 100%; height: 100%;
   margin: 0; padding: 0; /*5.5em .25em 6.25vh*/
 }
 button, input[type="button"] {
@@ -134,7 +134,7 @@ canvas#particles {
   background-color: #525965;
 }
 .section {
-  width: 100%; height: auto; min-height: 75vh;
+  width: 100%; height: auto; min-height: 100%;
   display: flex;
   align-items: center;
   text-align: center;
@@ -152,7 +152,7 @@ canvas#particles {
   z-index: 3;
 }
 #welcome {
-  height: 100vh; min-height: -webkit-fill-available; max-height: 100%;
+  height: 100%; max-height: 100%;
   z-index: 1003;
   overflow: hidden;
   text-align: center;
@@ -175,41 +175,14 @@ canvas#particles {
   stroke-width: 5;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-dasharray: 100%;
-  stroke-dashoffset: 100%;
+  stroke-dasharray: 350%;
+  stroke-dashoffset: 350%;
 }
 #welcome svg path:nth-of-type(1) {
-  animation: dash 2s ease forwards 0s, color 1s ease forwards 4s;
+  animation: dash 5s ease forwards 0s, color 1s ease forwards 3s;
 }
 #welcome svg path:nth-of-type(2) {
-  animation: dash 2s ease forwards .3s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(3) {
-  animation: dash 2s ease forwards .6s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(4) {
-  animation: dash 2s ease forwards .9s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(5) {
-  animation: dash 2s ease forwards 1.2s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(6) {
-  animation: dash 2s ease forwards 1.5s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(7) {
-  animation: dash 2s ease forwards 1.8s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(8) {
-  animation: dash 2s ease forwards 2.1s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(9) {
-  animation: dash 2s ease forwards 2.4s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(10) {
-  animation: dash 2s ease forwards 2.7s, color 1s ease forwards 4s;
-}
-#welcome svg path:nth-of-type(11) {
-  animation: dash 2s ease forwards 3s, color 1s ease forwards 4s;
+  animation: dash 5s ease forwards 1s, color 1s ease forwards 3s;
 }
 @-webkit-keyframes dash {
   to { stroke-dashoffset: 0; }
@@ -256,18 +229,18 @@ canvas#particles {
 }
 #welcome .scroll span:nth-of-type(1) {
   bottom: 24px;
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
 }
 #welcome .scroll span:nth-of-type(2) {
   bottom: 12px;
-  -webkit-animation-delay: 5.15s;
-  animation-delay: 5.15s;
+  -webkit-animation-delay: 3.15s;
+  animation-delay: 3.15s;
 }
 #welcome .scroll span:nth-of-type(3) {
   bottom: 0;
-  -webkit-animation-delay: 5.3s;
-  animation-delay: 5.3s;
+  -webkit-animation-delay: 3.3s;
+  animation-delay: 3.3s;
 }
 @-webkit-keyframes load {
   50% { opacity: 1; }
@@ -284,4 +257,9 @@ canvas#particles {
 @keyframes load {
   50% { opacity: 1; }
   100% { opacity: 0; }
+}
+.zone {
+	height: auto; width: 90%; margin: auto;
+	background-color: #DCDCDC;
+	padding: 5%;
 }

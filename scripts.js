@@ -34,12 +34,4 @@ $(document).ready(function(){
       $('#topper').hide();
     };
   };
-
-  // Check SVG letters size
-  /*var letter = $('svg path');
-  console.log(letter.length + " letters");
-
-  for(i = 0; i < letter.length; i++){
-    console.log(Math.ceil($(letter).get(i).getTotalLength()));
-  };*/
 });
