@@ -33,7 +33,7 @@ html::-webkit-scrollbar {
 }
 body {
   width: 100%; height: 100%;
-  margin: 0; padding: 0; /*5.5em .25em 6.25vh*/
+  margin: 0; padding: 0;
 }
 button, input[type="button"] {
   -webkit-appearance: none;
@@ -199,11 +199,10 @@ canvas#particles {
   80% { fill: transparent; }
   100% { stroke-dashoffset: 0; fill: #1C3954; }
 }
-
 #welcome .scroll {
   position: absolute;
   z-index: 3;
-  bottom: calc(25px + 2vh); /*was 6vh*/ left: calc(50% - 5px); right: calc(50% - 5px); top: auto;
+  bottom: calc(25px + 2vh); left: calc(50% - 5px); right: calc(50% - 5px); top: auto;
 }
 /*Adapted from https://codepen.io/nxworld/pen/OyRrGy*/
 #welcome .scroll span {
@@ -250,7 +249,7 @@ canvas#particles {
   100% { opacity: 0; }
 }
 .zone {
-	height: auto; width: 90%; max-width: 1200px; margin: auto;
+	height: auto; width: calc(100% - 24vh); min-width: 80%; max-width: 1200px; margin: auto;
 	background-color: #DCDCDC;
 	padding: 5%;
 }
