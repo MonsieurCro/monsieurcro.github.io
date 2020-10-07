@@ -170,43 +170,30 @@ canvas#particles {
   width: 100%; height: auto;
 }
 #welcome svg path {
-  fill: transparent;
+  fill: #1C3954;
   stroke: white;
   stroke-width: 5;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-dasharray: 350%;
+  stroke-dasharray: 0;
   stroke-dashoffset: 350%;
+  animation: draw 5s ease forwards 0s;
 }
-#welcome svg path:nth-of-type(1) {
-  animation: dash 5s ease forwards 0s, color 1s ease forwards 3s;
+@-webkit-keyframes draw {
+  0%, 80% { stroke-dasharray: 350%; fill: transparent; }
+  to { stroke-dashoffset: 0; fill: #1C3954; }
 }
-#welcome svg path:nth-of-type(2) {
-  animation: dash 5s ease forwards 1s, color 1s ease forwards 3s;
+@-moz-keyframes draw {
+  0%, 80% { stroke-dasharray: 350%; fill: transparent; }
+  to { stroke-dashoffset: 0; fill: #1C3954; }
 }
-@-webkit-keyframes dash {
-  to { stroke-dashoffset: 0; }
+@-o-keyframes draw {
+  0%, 80% { stroke-dasharray: 350%; fill: transparent; }
+  to { stroke-dashoffset: 0; fill: #1C3954; }
 }
-@-moz-keyframes dash {
-  to { stroke-dashoffset: 0; }
-}
-@-o-keyframes dash {
-  to { stroke-dashoffset: 0; }
-}
-@keyframes dash {
-  to { stroke-dashoffset: 0; }
-}
-@-webkit-keyframes color {
-  to { fill: #1C3954; }
-}
-@-moz-keyframes color {
-  to { fill: #1C3954; }
-}
-@-o-keyframes color {
-  to { fill: #1C3954; }
-}
-@keyframes color {
-  to { fill: #1C3954; }
+@keyframes draw {
+  0%, 80% { stroke-dasharray: 350%; fill: transparent; }
+  to { stroke-dashoffset: 0; fill: #1C3954; }
 }
 
 #welcome .scroll {
@@ -259,7 +246,7 @@ canvas#particles {
   100% { opacity: 0; }
 }
 .zone {
-	height: auto; width: 90%; margin: auto;
+	height: auto; width: 90%; max-width: 1200px; margin: auto;
 	background-color: #DCDCDC;
 	padding: 5%;
 }
