@@ -47,12 +47,13 @@ button, input[type="button"] {
 footer {
   position: fixed;
   bottom: 0; left: 0; right: 0; top: auto;
-  width: 100%; height: 6vh; line-height: 6vh;
+  width: 100%; height: auto;
   z-index: 1000;
   color: white;
   background-color: #002F46;
-  font-size: 75%;
+  font-size: 75%; line-height: 95%;
   text-align: center;
+  padding: 1em;
 }
 canvas#particles {
   position: absolute;
@@ -75,7 +76,7 @@ canvas#particles {
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: center; /*space-between;*/
+  justify-content: center;
   padding: .75rem 1.5rem;
   color: white;
   background-color: #002F46;
@@ -115,11 +116,11 @@ canvas#particles {
 }
 #topper {
   cursor: pointer;
-  position: fixed;
-  bottom: calc(6vh - 17.5px); right: calc(6vh - 17.5px);
+  position: absolute;
+  top: -17.5px; right: 17.5px; bottom: auto; left: auto;
   width: 35px; height: 35px;
   z-index: 1001;
-  font-size: 125%; line-height: 35px;
+  font-size: 150%; line-height: 35px;
   border-radius: 2px;
   text-align: center;
   color: white;
@@ -127,7 +128,6 @@ canvas#particles {
   -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, .3);
   -moz-box-shadow: 0 0 40px 0 rgba(0, 0, 0, .3);
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, .3);
-
   display: none;
 }
 #topper:hover {
@@ -135,6 +135,7 @@ canvas#particles {
 }
 .section {
   width: 100%; height: auto; min-height: 100%;
+  padding-top: 5.75em; padding-bottom: 2.25em;
   display: flex;
   align-items: center;
   text-align: center;
@@ -153,6 +154,7 @@ canvas#particles {
 }
 #welcome {
   height: 100%; max-height: 100%;
+  padding: 0;
   z-index: 1003;
   overflow: hidden;
   text-align: center;
