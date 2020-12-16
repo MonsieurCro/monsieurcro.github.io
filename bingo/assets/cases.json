@@ -10,5 +10,65 @@
 		"text":"Quand l'entremet n'a pas pris",
 		"step":0,
 		"max":5
+	},
+	{
+		"img":"",
+		"text":"Apparition d'un flocage rouge",
+		"step":0,
+		"max":5
+	},
+	{
+		"img":"",
+		"text":"Le dessin ne ressemble pas au résultat",
+		"step":0,
+		"max":5
+	},
+		{
+		"img":"",
+		"text":"Le chef est connu, mais pas tant que ça",
+		"step":0,
+		"max":5
+	},
+	{
+		"img":"https://img.cuisineaz.com/480x480/2020-09-23/i155230-cyril-lignac.jpeg",
+		"text":"Gourmande / Croquante",
+		"step":0,
+		"max":5
+	},
+	{
+		"img":"https://img.cuisineaz.com/480x480/2020-09-23/i155230-cyril-lignac.jpeg",
+		"text":"Cyril passe en mode tractopelle",
+		"step":0,
+		"max":5
+	},
+	{
+		"img":"https://img.cuisineaz.com/480x480/2020-09-23/i155230-cyril-lignac.jpeg",
+		"text":"Cyril refait une préparation flinguée",
+		"step":0,
+		"max":5
+	},
+		{
+		"img":"",
+		"text":"Accident de gélifiant",
+		"step":0,
+		"max":5
+	},
+	{
+		"img":"https://img.cuisineaz.com/480x480/2020-09-23/i155229-mercotte.jpeg",
+		"text":"Gâteau de Mercotte inconnu au bataillon",
+		"step":0,
+		"max":5
+	},
+	{
+		"img":"",
+		"text":"Apparition de pâte à sucre",
+		"step":0,
+		"max":5
+	},
+	{
+		"img":"",
+		"text":"MacGyverisation en dernière minute",
+		"step":0,
+		"max":5
 	}
 ]

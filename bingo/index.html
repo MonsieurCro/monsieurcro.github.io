@@ -111,12 +111,12 @@
     .container li[data-step="5"]::before {
       width: 0;
     }
-    .container li.mercotte, .container li.mercotte::before {
+    /*.container li.mercotte, .container li.mercotte::before {
       background-image: url(https://img.cuisineaz.com/480x480/2020-09-23/i155229-mercotte.jpeg);
     }
     .container li.cyril, .container li.cyril::before {
       background-image: url(https://img.cuisineaz.com/480x480/2020-09-23/i155230-cyril-lignac.jpeg);
-    }
+    }*/
     .container li::after {
       content: 'BINGO';
       display: flex;
@@ -178,18 +178,7 @@
       <h4>Bingo / Jeu à boire</h4>
     </div>
     <ul>
-      <!-- <li class="mercotte"><span>Mercotte dit une crasse sur un gâteau</span></
-      li><li class=""><span>Quand l'entremet n'a pas pris</span></
-      li><li class=""><span>Apparition d'un flocage rouge</span></
-      li><li class=""><span>Le dessin ne ressemble pas au résultat</span></
-      li><li class=""><span>Le chef est connu, mais pas tant que ça</span></
-      li><li class="cyril"><span>Gourmande / Croquante</span></
-      li><li class="cyril"><span>Cyril passe en mode tractopelle</span></
-      li><li class="cyril"><span>Cyril refait la préparation flinguée d'un candidat</span></
-      li><li class=""><span>Accident de gélifiant</span></
-      li><li class="mercotte"><span>Gâteau de Mercotte inconnu au bataillon</span></
-      li><li class=""><span>Apparition de pâte à sucre</span></
-      li><li class=""><span>MacGyverisation en dernière minute</span></li> -->
+      <li>Loading...</li>
     </ul>
     <div class="header">
       <h6>Made with <span style="color:#EC0000;">❤</span> by Corentin</h6>
@@ -202,7 +191,6 @@
     $(document).ready(function(){
       // Render cases
       $.getJSON('https://monsieurcro.github.io/bingo/assets/cases.json', function(data){
-        console.log(data);
         $.each(data, function(i, item){
           $('ul').append('<li data-step="' + item.step + '" data-max="' + item.max + '"><span>' + item.text + '</span><style></style></li>');
         });
