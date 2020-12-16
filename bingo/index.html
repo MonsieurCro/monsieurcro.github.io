@@ -178,7 +178,6 @@
       <h4>Bingo / Jeu à boire</h4>
     </div>
     <ul>
-      <li>Loading...</li>
       <!-- <li class="mercotte"><span>Mercotte dit une crasse sur un gâteau</span></
       li><li class=""><span>Quand l'entremet n'a pas pris</span></
       li><li class=""><span>Apparition d'un flocage rouge</span></
@@ -202,7 +201,8 @@
   <script>
     $(document).ready(function(){
       // Render cases
-      $.getJSON('./assets/cases.js', function(data){
+      $.getJSON('https://monsieurcro.github.io/bingo/assets/cases.json', function(data){
+        console.log(data);
         $.each(data, function(i, item){
           $('ul').append('<li data-step="' + item.step + '" data-max="' + item.max + '"><span>' + item.text + '</span><style></style></li>');
         });
