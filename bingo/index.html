@@ -7,7 +7,7 @@
   <title>BINGO!</title>
   <meta name="author" content="Corentin" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" />
-  <script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
   <style>
     * {
@@ -178,7 +178,8 @@
       <h4>Bingo / Jeu à boire</h4>
     </div>
     <ul>
-      <li class="mercotte"><span>Mercotte dit une crasse sur un gâteau</span></
+      <li>Loading...</li>
+      <!-- <li class="mercotte"><span>Mercotte dit une crasse sur un gâteau</span></
       li><li class=""><span>Quand l'entremet n'a pas pris</span></
       li><li class=""><span>Apparition d'un flocage rouge</span></
       li><li class=""><span>Le dessin ne ressemble pas au résultat</span></
@@ -189,15 +190,25 @@
       li><li class=""><span>Accident de gélifiant</span></
       li><li class="mercotte"><span>Gâteau de Mercotte inconnu au bataillon</span></
       li><li class=""><span>Apparition de pâte à sucre</span></
-      li><li class=""><span>MacGyverisation en dernière minute</span></li>
+      li><li class=""><span>MacGyverisation en dernière minute</span></li> -->
     </ul>
     <div class="header">
       <h6>Made with <span style="color:#EC0000;">❤</span> by Corentin</h6>
     </div>
     <span class="footer">‎‏‏‎ ‎</span>
   </div>
+
+  </script>
   <script>
     $(document).ready(function(){
+      // Render cases
+      $.getJSON('./assets/cases.js', function(data){
+        $.each(data, function(i, item){
+          $('ul').append('<li data-step="' + item.step + '" data-max="' + item.max + '"><span>' + item.text + '</span><style></style></li>');
+        });
+      });
+
+      // Calc progress
       $('.container li').each(function(){
         var caseNumber = $(this).index();
         var prevStep = null;
