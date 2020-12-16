@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -111,12 +110,6 @@
     .container li[data-step="5"]::before {
       width: 0;
     }
-    /*.container li.mercotte, .container li.mercotte::before {
-      background-image: url(https://img.cuisineaz.com/480x480/2020-09-23/i155229-mercotte.jpeg);
-    }
-    .container li.cyril, .container li.cyril::before {
-      background-image: url(https://img.cuisineaz.com/480x480/2020-09-23/i155230-cyril-lignac.jpeg);
-    }*/
     .container li::after {
       content: 'BINGO';
       display: flex;
@@ -177,46 +170,52 @@
       <h2>Le Meilleur Pâtissier</h2>
       <h4>Bingo / Jeu à boire</h4>
     </div>
+
     <ul>
-      <li>Loading...</li>
+      <!-- JSON -->
     </ul>
+
     <div class="header">
       <h6>Made with <span style="color:#EC0000;">❤</span> by Corentin</h6>
     </div>
     <span class="footer">‎‏‏‎ ‎</span>
   </div>
 
-  </script>
   <script>
     $(document).ready(function(){
       // Render cases
       $.getJSON('https://monsieurcro.github.io/bingo/assets/cases.json', function(data){
         $.each(data, function(i, item){
-          $('ul').append('<li data-step="' + item.step + '" data-max="' + item.max + '"><span>' + item.text + '</span><style></style></li>');
+          $('ul').append([
+            '<li id="case' + i + '" data-step="' + item.step + '" data-max="' + item.max + '">',
+            '<span>' + item.text + '</span>',
+            '<style>#case' + i + ', #case' + i + '::before { background-image: url(' + item.img + '); }</style>',
+            '</li>'
+          ].join(''));
         });
-      });
 
-      // Calc progress
-      $('.container li').each(function(){
-        var caseNumber = $(this).index();
-        var prevStep = null;
-        var currStep = 0;
-        var maxStep = parseInt($(this).attr('data-max')) || 5;
-        var progress = Math.floor((currStep/maxStep) * 100);
+        // Calc progress
+        $('.container li').each(function(){
+          var caseNumber = $(this).index();
+          var prevStep = null;
+          var currStep = 0;
+          var maxStep = parseInt($(this).attr('data-max')) || 5;
+          var progress = Math.floor((currStep/maxStep) * 100);
 
-        $(this).append('<div class="progress">' + progress + '%</div>');
+          $(this).append('<div class="progress">' + progress + '%</div>');
 
-        $(this).click(function(){
-          prevStep = parseInt($(this).attr('data-step')) || 0;
-          currStep = prevStep < 5 ? prevStep + 1 : 5;
-          progress = Math.floor((currStep/maxStep) * 100) < 100 ? Math.floor((currStep/maxStep) * 100) : 100;
+          $(this).click(function(){
+            prevStep = parseInt($(this).attr('data-step')) || 0;
+            currStep = prevStep < 5 ? prevStep + 1 : 5;
+            progress = Math.floor((currStep/maxStep) * 100) < 100 ? Math.floor((currStep/maxStep) * 100) : 100;
 
-          $(this).attr('data-step', currStep);
-          $(this).children('.progress').html(progress + '%');
-          //$(this + '::before').css({'width': (100 / maxStep) + '%'});
-          //$(this + '::after', this + ' span').css({'filter': 'grayscale(' + 1 + ')'});
+            $(this).attr('data-step', currStep);
+            $(this).children('.progress').html(progress + '%');
+            //$(this + '::before').css({'width': (100 / maxStep) + '%'});
+            //$(this + '::after', this + ' span').css({'filter': 'grayscale(' + 1 + ')'});
 
-          $('.footer').html('DEBUG >>> Case ' + (caseNumber + 1) + ' >> Step ' + currStep + '/' + maxStep);
+            $('.footer').html('DEBUG >>> Case ' + (caseNumber + 1) + ' >> Step ' + currStep + '/' + maxStep);
+          });
         });
       });
     });
